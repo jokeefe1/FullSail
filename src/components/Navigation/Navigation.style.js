@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+`;
+
 export const NavBar = styled.div`
     display: flex;
     justify-content: flex-end;
@@ -29,7 +36,7 @@ export const StyledLink = styled(Link)`
         color: ${props => props.theme.yellow};
     }
     &:last-child {
-        color: ${props => props.theme.yellow}
+        color: ${props => props.theme.yellow};
         font-size: 1.8rem;
     }
 `;

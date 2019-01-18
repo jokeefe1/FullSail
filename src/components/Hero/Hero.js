@@ -16,7 +16,7 @@ export default class extends React.Component {
                     afterSlide={slideIndex => this.setState({ slideIndex })}
                 >
                     <img src="https://unsplash.it/800/" />
-                    <img src="src/img/slide_01.jpg" />
+                    <img src="https://unsplash.it/802/" />
                     <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
                     <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
                     <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />

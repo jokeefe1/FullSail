@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+`;
+
 export const NavBar = styled.div`
     display: flex;
     justify-content: flex-end;
@@ -18,20 +25,20 @@ export const NavLinks = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  color: ${props => props.theme.white};
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 1.4rem;
+    color: ${props => props.theme.white};
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
 
-  &:first-child {
-    color: ${props => props.theme.yellow}
+    &:first-child {
+        color: ${props => props.theme.yellow};
+    }
 
     &:hover {
-      color: ${props => props.theme.white}
+        color: ${props => props.theme.white};
     }
-  }
 
-  &:hover {
-    color: ${props => props.theme.yellow};
-  }
+    &:hover {
+        color: ${props => props.theme.yellow};
+    }
 `;

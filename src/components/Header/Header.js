@@ -1,9 +1,11 @@
 import React from 'react';
-import { NavBar, NavLinks, StyledLink } from './Header.style';
+import { NavBar, NavLinks, StyledLink, Container } from './Header.style';
 import { FaInfo, FaRocketchat, FaPencilAlt } from 'react-icons/fa';
 
 const Header = props => (
     <NavBar>
+        <Container>
+            <div></div>
             <NavLinks>
                 <StyledLink to="/info">
                     Request Info <FaInfo />
@@ -16,6 +18,7 @@ const Header = props => (
                 </StyledLink>
                 <StyledLink to="#">800.226.7625</StyledLink>
             </NavLinks>
+        </Container>
     </NavBar>
 );
 
