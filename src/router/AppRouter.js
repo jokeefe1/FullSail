@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Header from '../components/Header/Header';
-import Navigation from '../components/Navigation/Navigation';
+import HomePage from '../components/HomePage/HomePage'
 import NotFound from '../components/NotFound/NotFound';
 
 const AppRouter = () => (
     <BrowserRouter>
             <Switch>
-                <Route path="/" component={Header} exact />
-                <Route path="/request-info" component={Header} exact />
-                <Route path="/chat-live" component={Header} exact />
-                <Route path="/Apply" component={Header} exact />
+                <Route path="/" component={HomePage} exact />
+                <Route path="/info" component={NotFound} exact />
+                <Route path="/chat" component={NotFound} exact />
+                <Route path="/apply" component={NotFound} exact />
                 <Route component={NotFound} />
             </Switch>
     </BrowserRouter>

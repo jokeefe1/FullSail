@@ -1,16 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Ul, Nav } from './Header.style';
+import { NavBar, NavLinks, StyledLink } from './Header.style';
+import { FaInfo, FaRocketchat, FaPencilAlt } from 'react-icons/fa';
 
 const Header = props => (
-    <Ul>
-        <Nav>
-            <Link to="#">Request Info</Link>
-            <Link to="#">Chat Live</Link>
-            <Link to="#">Apply</Link>
-            <Link to="#">800.226.7625</Link>
-        </Nav>
-    </Ul>
+    <NavBar>
+            <NavLinks>
+                <StyledLink to="/info">
+                    Request Info <FaInfo />
+                </StyledLink>
+                <StyledLink to="/chat">
+                    Chat Live <FaRocketchat />
+                </StyledLink>
+                <StyledLink to="/apply">
+                    Apply <FaPencilAlt />
+                </StyledLink>
+                <StyledLink to="#">800.226.7625</StyledLink>
+            </NavLinks>
+    </NavBar>
 );
 
-export default Header
+export default Header;

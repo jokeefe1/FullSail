@@ -55,10 +55,18 @@ table {
 
 /* Custom Global Styles  */
 
+* {
+	box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  background-repeat: no-repeat;
+  width: auto;
 }
 
 h1 {
@@ -87,5 +95,4 @@ h6 {
 
 `;
 
-
-export default GlobalStyle
+export default GlobalStyle;
