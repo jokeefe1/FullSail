@@ -1,13 +1,21 @@
 import React from 'react';
 
-import { NavBar, NavLinks, StyledLink, Container } from './Navigation.style';
+import {
+    NavBar,
+    NavLinks,
+    StyledLink,
+    Container,
+    ImgDiv
+} from './Navigation.style';
 import { FaChevronDown, FaSearch } from 'react-icons/fa';
 import Image from '../../img/svg/Logo';
 
 const Navigation = props => (
     <NavBar>
         <Container>
-            <Image />
+            <ImgDiv>
+                <Image />
+            </ImgDiv>
             <NavLinks>
                 <StyledLink to="/info">
                     Degree Programs <FaChevronDown />

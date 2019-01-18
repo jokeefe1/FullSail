@@ -30,7 +30,7 @@ export const StyledLink = styled(Link)`
     margin: 0 1rem;
     text-decoration: none;
     font-size: 1.4rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
 
     &:hover {
         color: ${props => props.theme.yellow};
@@ -41,3 +41,8 @@ export const StyledLink = styled(Link)`
     }
 `;
 
+export const ImgDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
