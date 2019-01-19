@@ -1,12 +1,6 @@
 import React from 'react';
-
-import {
-    NavBar,
-    NavLinks,
-    StyledLink,
-    Container,
-    ImgDiv
-} from './Navigation.style';
+import { Container } from '../../App.GlobalStyle'
+import { NavBar,NavLinks,StyledLink,ImgDiv, StyledChevron} from './Navigation.style';
 import { FaChevronDown, FaSearch } from 'react-icons/fa';
 import Image from '../../img/svg/Logo';
 
@@ -18,19 +12,20 @@ const Navigation = props => (
             </ImgDiv>
             <NavLinks>
                 <StyledLink to="/info">
-                    Degree Programs <FaChevronDown />
+                    Degree Programs{' '}
+                    <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/chat">
-                    Admissions <FaChevronDown />
+                    Admissions <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/apply">
-                    We're different <FaChevronDown />
+                    We're different <StyledChevron />
                 </StyledLink>
                 <StyledLink to="#">
-                    Campus & Online <FaChevronDown />
+                    Campus & Online <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/about">
-                    About <FaChevronDown />
+                    About <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/about">
                     <FaSearch />

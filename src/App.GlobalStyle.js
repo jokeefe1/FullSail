@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -96,3 +96,11 @@ h6 {
 `;
 
 export default GlobalStyle;
+
+
+export const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+`;

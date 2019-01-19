@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavBar, NavLinks, StyledLink, Container } from './Header.style';
+import { Container } from '../../App.GlobalStyle'
+import { NavBar, NavLinks, StyledLink } from './Header.style';
 import { FaInfo, FaRocketchat, FaPencilAlt } from 'react-icons/fa';
 
 const Header = props => (
