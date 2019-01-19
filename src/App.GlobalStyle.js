@@ -104,3 +104,10 @@ export const Container = styled.div`
     width: 1200px;
     margin: 0 auto;
 `;
+
+export const ContainerLarge = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 1070px;
+    margin: 0 auto;
+`;

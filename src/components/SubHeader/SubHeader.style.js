@@ -7,6 +7,7 @@ export const StyledSubHeader = styled.div`
 
     p {
         font-size: 2.3rem;
+        text-align: center;
         padding: 8.75rem 0;
         font-weight: 300;
         line-height: 1.5;
