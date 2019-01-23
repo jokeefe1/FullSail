@@ -1,19 +1,20 @@
 import React from 'react';
 import { Container } from '../../App.GlobalStyle'
 import { NavBar,NavLinks,StyledLink,ImgDiv, StyledChevron} from './Navigation.style';
-import { FaChevronDown, FaSearch } from 'react-icons/fa';
-import Image from '../../img/svg/Logo';
+import { FaSearch } from 'react-icons/fa';
 
 const Navigation = props => (
     <NavBar>
         <Container>
             <ImgDiv>
-                <Image />
+                <img
+                    src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931614/fullsail/logo.svg"
+                    alt="logo"
+                />
             </ImgDiv>
             <NavLinks>
                 <StyledLink to="/info">
-                    Degree Programs{' '}
-                    <StyledChevron />
+                    Degree Programs <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/chat">
                     Admissions <StyledChevron />
