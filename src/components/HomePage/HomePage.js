@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation';
 import Hero from '../Hero/Hero';
 import SubHeader from '../SubHeader/SubHeader';
 import { StyledDivider } from '../Divider/Divider.style';
+import Footer from '../Footer/Footer'
 
 const HomePage = props => (
     <>
@@ -13,6 +14,7 @@ const HomePage = props => (
         <Hero />
         <SubHeader />
         <StyledDivider />
+        <Footer />
     </>
 );
 
