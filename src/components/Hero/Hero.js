@@ -14,9 +14,9 @@ export default class extends React.Component {
                     slideIndex={this.state.slideIndex}
                     afterSlide={slideIndex => this.setState({ slideIndex })}
                 >
-                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg" />
-                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931617/fullsail/slide_02.jpg" />
-                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_03.jpg" />
+                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg" alt='campus'/>
+                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931617/fullsail/slide_02.jpg" alt='dream'/>
+                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_03.jpg" alt='study'/>
                 </Carousel>
             </Container>
         );
