@@ -38,7 +38,7 @@ export const StyledLink = styled(Link)`
 
 export const ImgDiv = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 `;
 

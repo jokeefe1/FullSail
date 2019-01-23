@@ -97,7 +97,6 @@ h6 {
 
 export default GlobalStyle;
 
-
 export const Container = styled.div`
     display: flex;
     justify-content: space-between;
@@ -106,7 +105,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerLarge = styled.div`
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     width: 1070px;
     margin: 0 auto;
