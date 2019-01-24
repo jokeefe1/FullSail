@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import AppRouter from './router/AppRouter';
 import GlobalStyle from './App.GlobalStyle';
 import HomePage from './components/HomePage/HomePage';
+import AppRouter from './router/AppRouter';
 
 const theme = {
     white: '#fff',
@@ -10,7 +10,9 @@ const theme = {
     orange: '##cc4b00',
     red: '#cc4b00',
     grey: '#d6d6d6',
-    darkGrey: '#505050'
+    lightGrey: '#626262',
+    darkGrey: '#505050',
+    darkestGrey: '#454545'
 };
 
 function App() {

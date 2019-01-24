@@ -40,6 +40,9 @@ export const ImgDiv = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    & > img {
+        width: 22rem;
+    }
 `;
 
 export const StyledChevron = styled(FaChevronDown)`
