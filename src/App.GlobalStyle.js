@@ -66,7 +66,7 @@ html {
 
 img {
   background-repeat: no-repeat;
-  width: auto;
+  /* width: auto; */
 }
 
 h1 {
