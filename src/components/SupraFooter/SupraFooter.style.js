@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export const AllDiv = styled.div`
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
            background-color: ${props => props.theme.darkWhite};
            & > section {
                display: flex;
-               width: 35%;
                background-color: ${props => props.theme.white};
                padding: 4rem;
-               margin: 5rem 0;
+               margin: 5rem 2rem;
                border-left: 3px solid ${props => props.theme.red};
                & > div {
+                   margin-right: 4rem;
                    & > h2 {
                        font-size: 2.5rem;
                        line-height: 2;
@@ -23,7 +23,7 @@ export const AllDiv = styled.div`
                        color: ${props => props.theme.darkGrey};
                    }
                }
-               & > div:last-child {
+               & > div:last-child {                                    
                    width: 4rem;
                    height: 4rem;
                    border-top: 1px solid ${props => props.theme.red};

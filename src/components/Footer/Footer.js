@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaGlobe, FaInstagram, FaPlay, FaRegCopyright, FaTwitter } from 'react-icons/fa';
-import { ContainerLarge } from '../../App.GlobalStyle';
-import { AllDiv, ImgDiv, StyledFooter, StyledLink, SubFooter, Container } from './Footer.style';
+import { AllDiv, Container, ImgDiv, StyledFooter, StyledLink, SubFooter } from './Footer.style';
 
 export default function Footer(props) {
     return (
