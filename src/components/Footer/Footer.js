@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaFacebookF, FaGlobe, FaInstagram, FaPlay, FaRegCopyright, FaTwitter } from 'react-icons/fa';
 import { ContainerLarge } from '../../App.GlobalStyle';
-import { AllDiv, ImgDiv, StyledFooter, StyledLink, SubFooter } from './Footer.style';
+import { AllDiv, ImgDiv, StyledFooter, StyledLink, SubFooter, Container } from './Footer.style';
 
 export default function Footer(props) {
     return (
         <StyledFooter>
-            <ContainerLarge>
+            <Container>
                 <ImgDiv>
                     <img
                         src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931614/fullsail/logo.svg"
@@ -63,7 +63,7 @@ export default function Footer(props) {
                         </div>
                     </div>
                 </AllDiv>
-            </ContainerLarge>
+            </Container>
                 <SubFooter>
                     <div>
                         <StyledLink to='/'>Acreditation</StyledLink>

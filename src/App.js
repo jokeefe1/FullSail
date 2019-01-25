@@ -6,6 +6,7 @@ import AppRouter from './router/AppRouter';
 
 const theme = {
     white: '#fff',
+    darkWhite: '#f1f1f0',
     yellow: '#fdb913',
     orange: '##cc4b00',
     red: '#cc4b00',

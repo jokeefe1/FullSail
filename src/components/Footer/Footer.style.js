@@ -5,6 +5,11 @@ export const StyledFooter = styled.footer`
     background-color: ${props => props.theme.darkGrey};
 `;
 
+export const Container = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+`;
+
 export const ImgDiv = styled.div`
     display: block;
     & > img {
@@ -37,7 +42,7 @@ export const AllDiv = styled.div`
         & > div {
             display: flex;
             justify-content: space-between;
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
             & > p {
                 padding-right: 2rem;
                 & > span {
