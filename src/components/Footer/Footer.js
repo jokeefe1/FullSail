@@ -1,7 +1,7 @@
 import React from 'react';
+import { FaFacebookF, FaGlobe, FaInstagram, FaPlay, FaRegCopyright, FaTwitter } from 'react-icons/fa';
 import { ContainerLarge } from '../../App.GlobalStyle';
-import { AllDiv, ImgDiv, StyledFooter, StyledLink } from './Footer.style';
-import { FaInstagram, FaFacebookF, FaTwitter,FaPlay, FaGlobe} from 'react-icons/fa'
+import { AllDiv, ImgDiv, StyledFooter, StyledLink, SubFooter } from './Footer.style';
 
 export default function Footer(props) {
     return (
@@ -55,15 +55,29 @@ export default function Footer(props) {
                             <StyledLink to='/'>Connect With Us</StyledLink>
                         </div>
                         <div>
-                            <StyledLink to='/'><FaInstagram />Instagram</StyledLink>
-                            <StyledLink to='/'><FaFacebookF />Facebook</StyledLink>
-                            <StyledLink to='/'><FaTwitter />Twitter</StyledLink>
-                            <StyledLink to='/'><FaPlay />YouTube</StyledLink>
-                            <StyledLink to='/'>Virtual Tour</StyledLink>
+                            <StyledLink to='/'><span><FaInstagram /></span>Instagram</StyledLink>
+                            <StyledLink to='/'><span><FaFacebookF /></span>Facebook</StyledLink>
+                            <StyledLink to='/'><span><FaTwitter /></span>Twitter</StyledLink>
+                            <StyledLink to='/'><span><FaPlay /></span>YouTube</StyledLink>
+                            <StyledLink to='/'><span><FaGlobe /></span>Virtual Tour</StyledLink>
                         </div>
                     </div>
                 </AllDiv>
             </ContainerLarge>
+                <SubFooter>
+                    <div>
+                        <StyledLink to='/'>Acreditation</StyledLink>
+                        <StyledLink to='/'>Your Privacy Rights</StyledLink>
+                        <StyledLink to='/'>Consumer Disclosure</StyledLink>
+                        <StyledLink to='/'>Net Price Calculator</StyledLink>
+                        <StyledLink to='/'>SMS Terms & Conditions</StyledLink>
+                        <StyledLink to='/'>Disability Services</StyledLink>
+                        <StyledLink to='/'>Campus Safety</StyledLink>
+                    </div>
+                    <div>
+                    <p><FaRegCopyright />2019 Full Sail, LLC. All Rights Reserved</p>
+                    </div>
+                </SubFooter>
         </StyledFooter>
     );
 }

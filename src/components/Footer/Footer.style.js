@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 
 export const StyledFooter = styled.footer`
     background-color: ${props => props.theme.darkGrey};
@@ -13,12 +13,21 @@ export const ImgDiv = styled.div`
     }
 `;
 
+export const FirstDiv = styled.div`
+    font-size: 2rem;
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${props => props.theme.white};
+`;
+
 export const AllDiv = styled.div`
     display: flex;
     color: ${props => props.theme.white};
     font-size: 1.5rem;
     line-height: 1.5;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     & > div:first-child {
         padding-right: 8rem;
         border-right: 1px solid ${props => props.theme.lightGrey};
@@ -52,25 +61,38 @@ export const AllDiv = styled.div`
             }
         }
     }
-    & > div:last-child {   
+    & > div:last-child {
         display: flex;
-        justify-content: space-between;   
-        width: 100%;  
+        justify-content: space-between;
+        width: 100%;
         padding-left: 2rem;
         font-size: 1.3rem;
         & > div {
             display: flex;
             flex-direction: column;
             line-height: 3;
+            &:last-child {
+                span {
+                    padding: 1rem;
+                }
+            }
         }
     }
 `;
 
-export const FirstDiv = styled.div`
-    font-size: 2rem;
-`;
-
-export const StyledLink = styled(Link)`
-    text-decoration: none;
+export const SubFooter = styled.div`
+    background-color: ${props => props.theme.darkestGrey};
     color: ${props => props.theme.white};
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    & > div {
+        padding: 1rem;
+        font-size: 1.2rem;
+        & > * {
+            padding: 0 2rem;
+        }
+    }
 `;
