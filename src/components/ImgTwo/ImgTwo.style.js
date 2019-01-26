@@ -31,6 +31,9 @@ export const StyledLink = styled(Link)`
         text-transform: uppercase;
         text-decoration: none;
         padding-right: 1.5rem;
+         &:hover {
+            text-decoration: underline;
+        }
 `;
 
 export const MiddleSection = styled.section`
@@ -52,6 +55,9 @@ export const BottomSection = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+         &:hover {
+            color: ${props => props.theme.yellow};
+        }
         & > p {
             font-size: 1.5rem;
             padding-top: 1rem;

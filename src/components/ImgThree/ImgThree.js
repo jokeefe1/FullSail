@@ -23,13 +23,11 @@ export default function ImgOne() {
     return (
         <StyledDiv>
             <TopSection>
-                <h1>Our Campus</h1>
+                <h1>Learning Online</h1>
                 <p>
-                    With acres of studios, labs, performance venues and
-                    production environments, Full Sail's campus is anything but
-                    typical.
+                   Full Sail's online degrees are delivered through our media-rich, human-focused learning platform.
                 </p>
-                <p><StyledLink to='/'>Explor our campus</StyledLink><FaChevronRight /></p>
+                <p><StyledLink to='/'>Explore the online experience</StyledLink><FaChevronRight /></p>
             </TopSection>
             <MiddleSection>
                 <h2>

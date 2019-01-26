@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
 export const StyledDiv = styled.div`
-    background-image: url('https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg');
+    background-image: url(${props => props.theme.url1});
     background-size: cover;
     background-repeat: no-repeat;
     color: ${props => props.theme.white};
@@ -31,6 +31,9 @@ export const StyledLink = styled(Link)`
         text-transform: uppercase;
         text-decoration: none;
         padding-right: 1.5rem;
+        &:hover {
+            text-decoration: underline;
+        }
 `;
 
 export const MiddleSection = styled.section`
@@ -52,6 +55,9 @@ export const BottomSection = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        &:hover {
+            color: ${props => props.theme.yellow};
+        }
         & > p {
             font-size: 1.5rem;
             padding-top: 1rem;
