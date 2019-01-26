@@ -30,7 +30,7 @@ export const StyledLink = styled(Link)`
         color: ${props => props.theme.yellow};
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem;
+        padding-right: 1.5rem;
 `;
 
 export const MiddleSection = styled.section`
