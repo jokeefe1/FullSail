@@ -1,16 +1,19 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 
 export const StyledDiv = styled.div`
     background-image: url(${props => props.theme.url3});
     background-size: cover;
     background-repeat: no-repeat;
     color: ${props => props.theme.white};
+    padding: 3rem 0;
 `;
 
 export const TopSection = styled.section`
-    padding: 5rem;
+    width: 70%;
+    padding-left: 3rem;
     margin-left: 15rem;
+    margin-bottom: 10rem;
     border-left: solid 3px ${props => props.theme.white};
     & > h1 {
         font-size: 6rem;
@@ -27,13 +30,13 @@ export const TopSection = styled.section`
 `;
 
 export const StyledLink = styled(Link)`
-        color: ${props => props.theme.yellow};
-        text-transform: uppercase;
-        text-decoration: none;
-        padding-right: 1.5rem;
-         &:hover {
-            text-decoration: underline;
-        }
+    color: ${props => props.theme.yellow};
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 1.5rem;
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 export const MiddleSection = styled.section`
@@ -55,7 +58,7 @@ export const BottomSection = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-         &:hover {
+        &:hover {
             color: ${props => props.theme.yellow};
         }
         & > p {

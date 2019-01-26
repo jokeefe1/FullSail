@@ -6,11 +6,14 @@ export const StyledDiv = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     color: ${props => props.theme.white};
+    padding: 3rem 0;
 `;
 
 export const TopSection = styled.section`
-    padding: 5rem;
+    width: 70%;
+    padding-left: 3rem;
     margin-left: 15rem;
+    margin-bottom: 10rem;
     border-left: solid 3px ${props => props.theme.white};
     & > h1 {
         font-size: 6rem;

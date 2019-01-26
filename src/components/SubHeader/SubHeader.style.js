@@ -11,7 +11,7 @@ export const StyledSubHeader = styled.div`
         padding: 5.75rem 0;
         font-weight: 300;
         line-height: 1.5;
-        color: ${props => props.theme.darkGrey};
+        color: ${props => props.theme.lightGrey};
 
 }`;
 
