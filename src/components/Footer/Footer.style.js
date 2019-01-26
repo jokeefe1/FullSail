@@ -36,6 +36,9 @@ export const AllDiv = styled.div`
     & > div:first-child {
         padding-right: 8rem;
         border-right: 1px solid ${props => props.theme.lightGrey};
+        ${({theme}) => theme.tabletLarge`
+            background-color: red;
+        `}
         & > p {
             padding: 0 0 2rem;
         }

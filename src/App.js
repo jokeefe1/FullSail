@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './App.GlobalStyle';
 import HomePage from './components/HomePage/HomePage';
 import AppRouter from './router/AppRouter';
+import media from './media'
 
 const theme = {
     white: '#fff',
@@ -14,6 +15,7 @@ const theme = {
     lightGrey: '#626262',
     darkGrey: '#505050',
     darkestGrey: '#454545',
+    ...media,
     url1:
         'https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg',
     url2:

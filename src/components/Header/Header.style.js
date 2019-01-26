@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
+import styled from 'styled-components';
 
 export const NavBar = styled.div`
     display: flex;
@@ -11,6 +10,9 @@ export const NavBar = styled.div`
     left: 0;
     background-color: #454545;
     border-bottom: solid 1px #d6d6d6;
+    ${({ theme }) => theme.tabletLarge`
+         background-color: ${props => props.theme.white};
+   `}
 `;
 
 export const NavLinks = styled.div`
@@ -31,9 +33,10 @@ export const StyledLink = styled(Link)`
             color: ${props => props.theme.white};
         }
     }
-
-
     &:hover {
         color: ${props => props.theme.yellow};
     }
+    ${({theme}) => theme.tabletLarge`
+        color: ${props => props.theme.darkGrey};
+    `}
 `;

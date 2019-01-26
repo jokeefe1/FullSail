@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const NavBar = styled.div`
     display: flex;
@@ -13,6 +12,9 @@ export const NavBar = styled.div`
     background-color: ${props => props.theme.white};
     border-bottom: solid 1px #d6d6d6;
     transform: scaleY(1);
+    ${({ theme }) => theme.tabletLarge`
+      display: none;
+   `}
 `;
 
 export const NavLinks = styled.div`
@@ -22,19 +24,20 @@ export const NavLinks = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-           color: ${props => props.theme.darkGrey};
-           margin: 0 1rem;
-           text-decoration: none;
-           font-size: 1.4rem;
-           padding: 0.7rem;
+    color: ${props => props.theme.darkGrey};
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.7rem;
 
-           &:hover {
-               color: ${props => props.theme.yellow};
-           }
-           &:last-child {
-               color: ${props => props.theme.yellow};
-               font-size: 1.8rem;
-           }`;
+    &:hover {
+        color: ${props => props.theme.yellow};
+    }
+    &:last-child {
+        color: ${props => props.theme.yellow};
+        font-size: 1.8rem;
+    }
+`;
 
 export const ImgDiv = styled.div`
     display: flex;
