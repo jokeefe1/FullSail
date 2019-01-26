@@ -43,6 +43,9 @@ export const ImgDiv = styled.div`
     & > img {
         width: 22rem;
     }
+    & > img:hover {
+        opacity: 0.5;
+    }
 `;
 
 export const StyledChevron = styled(FaChevronDown)`

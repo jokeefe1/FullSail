@@ -8,6 +8,7 @@ import {
     StyledChevron,
     StyledLink
 } from './Navigation.style';
+import { Link } from 'react-router-dom'
 
 const Navigation = props => (
     <NavBar>
