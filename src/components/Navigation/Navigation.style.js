@@ -32,6 +32,9 @@ export const StyledLink = styled(Link)`
 
     &:hover {
         color: ${props => props.theme.yellow};
+        & > * {
+            color: ${props => props.theme.yellow};
+        }
     }
     &:last-child {
         color: ${props => props.theme.yellow};

@@ -34,7 +34,7 @@ export const MiddleSection = styled.section`
 export const BottomSection = styled.section`
            display: flex;
            justify-content: space-evenly;
-           font-size: 6rem;
+           font-size: 5rem;
            padding-bottom: 5rem;
            & > div {
                display: flex;

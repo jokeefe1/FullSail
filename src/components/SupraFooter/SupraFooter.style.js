@@ -45,4 +45,7 @@ export const AllDiv = styled.div`
                        border-right: 1px solid ${props => props.theme.white};
                    }
                }
+               ${({theme}) => theme.tabletLarge`
+                    ;
+               `}
            }`;

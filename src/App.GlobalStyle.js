@@ -113,7 +113,7 @@ export const Container = styled.div`
 
 export const ContainerLarge = styled.div`
     justify-content: space-between;
-    width: 1070px;
+    max-width: 1070px;
     margin: 0 auto;
 `;
 

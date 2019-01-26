@@ -25,6 +25,7 @@ export const FirstDiv = styled.div`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.white};
+    display: inline-block;
 `;
 
 export const AllDiv = styled.div`
@@ -34,55 +35,51 @@ export const AllDiv = styled.div`
     line-height: 1.5;
     padding-bottom: 2rem;
     & > div:first-child {
-        padding-right: 8rem;
-        border-right: 1px solid ${props => props.theme.lightGrey};
-        ${({theme}) => theme.tabletLarge`
-            background-color: red;
-        `}
-        & > p {
-            padding: 0 0 2rem;
-        }
-        & > div {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 3rem;
+        & > div:first-child {
+            padding-right: 8rem;
+            border-right: 1px solid ${props => props.theme.lightGrey};
             & > p {
-                padding-right: 2rem;
-                & > span {
-                    color: ${props => props.theme.yellow};
+                padding: 0 0 2rem;
+            }
+            & > div {
+                display: flex;
+                justify-content: space - between;
+                padding-bottom: 3rem;
+                & > p {
+                    padding-right: 2rem;
+                    & > span {
+                        color: ${props => props.theme.yellow};
+                    }
                 }
             }
-        }
-        & > button {
-            padding: 1rem;
-            width: 12rem;
-            height: 5rem;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            border: none;
-            color: ${props => props.theme.white};
-            background-color: ${props => props.theme.darkestGrey};
-            &:hover {
-                background-color: ${props => props.theme.yellow};
+            & > button {
+                padding: 1rem;
+                width: 12rem;
+                height: 5rem;
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: none;
+                color: ${props => props.theme.white};
+                background-color: ${props => props.theme.darkestGrey};
+                &:hover {
+                    background-color: ${props => props.theme.yellow};
+                }
             }
         }
     }
     & > div:last-child {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding-left: 2rem;
-        font-size: 1.3rem;
         & > div {
             display: flex;
-            flex-direction: column;
-            line-height: 3;
-            &:last-child {
-                span {
-                    padding: 1rem;
-                }
+            width: 100%;
+            padding-left: 2rem;
+            font-size: 1.3rem;
+            ${({ theme }) => theme.tabletLarge`
+            background-color: red;
+        `}
+            & > div {
+                padding: 4rem;
             }
         }
     }
