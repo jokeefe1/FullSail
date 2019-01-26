@@ -13,7 +13,13 @@ const theme = {
     grey: '#d6d6d6',
     lightGrey: '#626262',
     darkGrey: '#505050',
-    darkestGrey: '#454545'
+    darkestGrey: '#454545',
+    url1:
+        'https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg',
+    url2:
+        'https://res.cloudinary.com/john-okeefe/image/upload/v1547931617/fullsail/slide_02.jpg',
+    url3:
+        'https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_03.jpg'
 };
 
 function App() {

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 export const StyledDiv = styled.div`
     background-image: url('https://res.cloudinary.com/john-okeefe/image/upload/v1547931616/fullsail/slide_01.jpg');
@@ -20,11 +21,21 @@ export const TopSection = styled.section`
         width: 50%;
         padding-bottom: 2rem;
     }
+    & > p:last-child {
+        color: ${props => props.theme.yellow};
+    }
+`;
+
+export const StyledLink = styled(Link)`
+        color: ${props => props.theme.yellow};
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem;
 `;
 
 export const MiddleSection = styled.section`
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     padding-bottom: 3rem;
     & > h2 {
         font-size: 2.5rem;
@@ -32,17 +43,18 @@ export const MiddleSection = styled.section`
 `;
 
 export const BottomSection = styled.section`
-           display: flex;
-           justify-content: space-evenly;
-           font-size: 6rem;
-           padding-bottom: 5rem;
-           & > div {
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               align-items: center;
-                & > p {
-                    font-size: 1.5rem;
-                    padding-top: 1rem;
-                }
-           }`;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 6rem;
+    padding-bottom: 5rem;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > p {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+        }
+    }
+`;

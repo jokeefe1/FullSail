@@ -97,6 +97,8 @@ h6 {
 
 export default GlobalStyle;
 
+//Container Styles
+
 export const ContainerHead = styled.div`
     display: flex;
     justify-content: space-between;

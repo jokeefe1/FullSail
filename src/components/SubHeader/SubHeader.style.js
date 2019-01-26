@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 export const StyledSubHeader = styled.div`
     width: 100%;
-    height: 16rem;
+    height: 10rem;
 
     p {
         font-size: 2.3rem;
         text-align: center;
-        padding: 8.75rem 0;
+        padding: 5.75rem 0;
         font-weight: 300;
         line-height: 1.5;
         color: ${props => props.theme.darkGrey};
