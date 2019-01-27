@@ -15,7 +15,7 @@ export default class extends React.Component {
                 slideIndex={this.state.slideIndex}
                 afterSlide={slideIndex => this.setState({ slideIndex })}
                 pauseOnHover={true}
-                autoplay={false}
+                autoplay={true}
                 initialSlideHeight={10}
                 transitionMode="fade"
                 wrapAround={true}
@@ -23,6 +23,7 @@ export default class extends React.Component {
                 dragging={true}
                 swiping={true}
                 style={{ height: 480 }}
+                withoutControls={true}
             >
                 <ImgOne />
                 <ImgTwo />

@@ -14,7 +14,7 @@ export const ImgDiv = styled.div`
     display: block;
     & > img {
         width: 22rem;
-        padding: 4rem 0 1rem;
+        padding: 4rem 2rem 1rem;
     }
     ${({ theme }) => theme.tabletLarge`
         padding: 2rem;
@@ -41,9 +41,10 @@ export const AllDiv = styled.div`
            & > section:first-child {
                & > div {
                    padding-right: 8rem;
+                   padding-left: 2rem;
                    border-right: 1px solid ${props => props.theme.lightGrey};
                    & > p {
-                       padding: 0 0 2rem;
+                       /* padding: 0 2rem 2rem; */
                    }
                    & > div {
                        display: flex;

@@ -7,7 +7,7 @@ export const ImgContainer = styled.div`
     grid-row-gap: 5rem;
     ${({ theme }) => theme.tabletLarge`
       grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
     `}
     ${({ theme }) => theme.tablet`
         grid-template-columns: 1fr 1fr;

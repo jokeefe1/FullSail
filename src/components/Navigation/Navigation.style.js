@@ -49,6 +49,7 @@ export const ImgDiv = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 2rem;
     & > img {
         width: 22rem;
     }
