@@ -13,6 +13,7 @@ export const MiddleSection = styled.div`
 `;
 
 export const BottomSection = styled.div`
+    display: none;
     background-color: ${({ theme }) => theme.white};
     & > div {
         display: flex;
@@ -33,4 +34,7 @@ export const BottomSection = styled.div`
             color: ${({theme}) => theme.yellow};
         }
     }
+    ${({ theme }) => theme.phone`
+        display: inline-block;
+    `}
 `;

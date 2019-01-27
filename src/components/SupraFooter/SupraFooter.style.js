@@ -8,7 +8,7 @@ export const AllDiv = styled.div`
     & > section {
         display: flex;
         background-color: ${props => props.theme.white};
-        padding: 4rem;
+        padding: 2rem;
         margin: 5rem 2rem;
         border-left: 3px solid ${props => props.theme.red};
         & > div {
