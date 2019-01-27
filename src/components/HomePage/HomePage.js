@@ -7,6 +7,7 @@ import Navigation from '../Navigation/Navigation';
 import SubHeader from '../SubHeader/SubHeader';
 import SupraFooter from '../SupraFooter/SupraFooter'
 import PhoneMenu from '../PhoneMenu/PhoneMenu'
+import PhoneButtons from '../PhoneButtons/PhoneButtons'
 
 const HomePage = props => (
     <>
@@ -18,6 +19,7 @@ const HomePage = props => (
         <StyledDivider />
         <SupraFooter />
         <Footer />
+        <PhoneButtons />
     </>
 );
 

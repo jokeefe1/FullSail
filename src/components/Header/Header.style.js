@@ -67,12 +67,20 @@ export const StyledLink = styled(Link)`
 `;
 
 export const MobileMenu = styled.div`
-    display: inline-block;
-    color: ${({theme}) => theme.yellow};
-    font-size: 4rem;
-    padding: 1rem;
-    ${({theme}) => theme.desktop`
-        display: none;
-
+    display: none;
+    ${({ theme }) => theme.phone`
+        display: inline-block;
+        color: ${({ theme }) => theme.yellow};
+        font-size: 4rem;
+    `}
+     ${({ theme }) => theme.tablet`
+        display: inline-block;
+        color: ${({ theme }) => theme.yellow};
+        font-size: 4rem;
+    `}
+    ${({ theme }) => theme.tabletLarge`
+        display: inline-block;
+        color: ${({ theme }) => theme.yellow};
+        font-size: 4rem;
     `}
 `;
