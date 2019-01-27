@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
 
 export const StyledDiv = styled.div`
     background-image: url(${props => props.theme.url1});
@@ -27,19 +27,19 @@ export const TopSection = styled.section`
     & > p:last-child {
         color: ${props => props.theme.yellow};
     }
-    ${({theme}) => theme.tabletLarge`
+    ${({ theme }) => theme.tabletLarge`
         margin-left: 5rem
     `}
 `;
 
 export const StyledLink = styled(Link)`
-        color: ${props => props.theme.yellow};
-        text-transform: uppercase;
-        text-decoration: none;
-        padding-right: 1.5rem;
-        &:hover {
-            text-decoration: underline;
-        }
+    color: ${props => props.theme.yellow};
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 1.5rem;
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 export const MiddleSection = styled.section`
@@ -49,6 +49,9 @@ export const MiddleSection = styled.section`
     & > h2 {
         font-size: 2.5rem;
     }
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `}
 `;
 
 export const BottomSection = styled.section`
@@ -69,4 +72,8 @@ export const BottomSection = styled.section`
             padding-top: 1rem;
         }
     }
+    ${({ theme }) => theme.tablet`
+                display: none;
+    `}
 `;
+

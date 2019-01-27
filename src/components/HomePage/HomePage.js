@@ -6,12 +6,14 @@ import Hero from '../Hero/Hero';
 import Navigation from '../Navigation/Navigation';
 import SubHeader from '../SubHeader/SubHeader';
 import SupraFooter from '../SupraFooter/SupraFooter'
+import PhoneMenu from '../PhoneMenu/PhoneMenu'
 
 const HomePage = props => (
     <>
         <Header />
         <Navigation />
         <Hero />
+        <PhoneMenu />
         <SubHeader />
         <StyledDivider />
         <SupraFooter />

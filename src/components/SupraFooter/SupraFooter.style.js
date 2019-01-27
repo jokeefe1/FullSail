@@ -40,11 +40,14 @@ export const AllDiv = styled.div`
                     color: ${props => props.theme.white};
                 }
             }
+            & > div:last-child > * {
+                color: ${props => props.theme.white};
+            }
         }
-        ${({ theme }) => theme.tabletLarge`
-                    ;
-               `}
     }
+    ${({ theme }) => theme.tablet`
+            flex-direction: column;
+    `}
 `;
 
 export const StyledChevron = styled(FaChevronRight)`
