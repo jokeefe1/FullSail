@@ -11,7 +11,10 @@ export const NavBar = styled.div`
     left: 0;
     background-color: ${props => props.theme.white};
     border-bottom: solid 1px #d6d6d6;
-    transform: scaleY(1);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     ${({ theme }) => theme.tabletLarge`
       display: none;
    `}
