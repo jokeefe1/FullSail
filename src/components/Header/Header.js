@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaInfo, FaPencilAlt, FaRocketchat } from 'react-icons/fa';
 import { ContainerHead } from '../../App.GlobalStyle';
-import { ImgDiv, NavBar, NavLinks, StyledLink } from './Header.style';
+import { ImgDiv, NavBar, NavLinks, StyledLink, MobileMenu } from './Header.style';
+import { MdMenu } from 'react-icons/md'
+
 
 const Header = props => (
     <NavBar>
@@ -24,6 +26,9 @@ const Header = props => (
                 </StyledLink>
                 <StyledLink to="#">800.226.7625</StyledLink>
             </NavLinks>
+            <MobileMenu>
+                <MdMenu />
+            </MobileMenu>
         </ContainerHead>
     </NavBar>
 );
