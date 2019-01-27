@@ -28,8 +28,10 @@ export const FirstDiv = styled.div`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.white};
-    /* display: inline-block; */
     padding: 1rem;
+    & > span {
+        margin: 1rem;
+    }
 `;
 
 export const AllDiv = styled.div`
@@ -38,9 +40,13 @@ export const AllDiv = styled.div`
            font-size: 1.5rem;
            line-height: 1.5;
            padding-bottom: 2rem;
+           & > section{
+               width: 100%;
+           }
            & > section:first-child {
+               width:30%;
                & > div {
-                   padding-right: 8rem;
+                   padding-right: 2rem;
                    padding-left: 2rem;
                    border-right: 1px solid ${props => props.theme.lightGrey};
                    & > p {
