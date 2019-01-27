@@ -15,6 +15,24 @@ export const NavBar = styled.div`
    `}
 `;
 
+export const ImgDiv = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    & > img {
+        width: 20rem;
+        margin-left: 4rem;
+        &:hover {
+            opacity: 0.5;
+        }
+        ${({ theme }) => theme.desktop`
+        display: none;
+    `}
+        ${({ theme }) => theme.tabletLarge`
+        display: flex;
+    `}
+    }
+`;
+
 export const NavLinks = styled.div`
     display: flex;
     justify-content: space-around;
@@ -36,7 +54,7 @@ export const StyledLink = styled(Link)`
     &:hover {
         color: ${props => props.theme.yellow};
     }
-    ${({theme}) => theme.tabletLarge`
+    ${({ theme }) => theme.tabletLarge`
         color: ${props => props.theme.darkGrey};
     `}
 `;

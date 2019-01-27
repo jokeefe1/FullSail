@@ -1,12 +1,17 @@
 import React from 'react';
-import { ContainerHead } from '../../App.GlobalStyle'
-import { NavBar, NavLinks, StyledLink } from './Header.style';
-import { FaInfo, FaRocketchat, FaPencilAlt } from 'react-icons/fa';
+import { FaInfo, FaPencilAlt, FaRocketchat } from 'react-icons/fa';
+import { ContainerHead } from '../../App.GlobalStyle';
+import { ImgDiv, NavBar, NavLinks, StyledLink } from './Header.style';
 
 const Header = props => (
     <NavBar>
         <ContainerHead>
-            <div></div>
+            <ImgDiv>
+                <img
+                    src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931614/fullsail/logo.svg"
+                    alt="logo"
+                />
+            </ImgDiv>
             <NavLinks>
                 <StyledLink to="/info">
                     Request Info <FaInfo />

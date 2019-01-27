@@ -14,9 +14,9 @@ export const ImgDiv = styled.div`
     display: block;
     & > img {
         width: 22rem;
-        padding: 4rem 0 3rem;
+        padding: 4rem 0 1rem;
     }
-    ${({theme}) => theme.tabletLarge`
+    ${({ theme }) => theme.tabletLarge`
         padding: 2rem;
     `}
 `;
@@ -72,41 +72,42 @@ export const AllDiv = styled.div`
                 }
             }
             ${({ theme }) => theme.tabletLarge`
-            display: flex;
-            justify-content: baseline;
-            & > * {
-                padding: 2rem;
-            }
-        `}
+                    display: flex;
+                    justify-content: baseline;
+                    border-right: none;
+                    border-bottom: 1px solid ${props => props.theme.lightGrey};
+                `}
         }
     }
     & > section:last-child {
         & > div {
             display: flex;
-            background: red;
+            justify-content: space-between;
             list-style: none;
+            & > div ul > li {
+                padding: 0.6rem 0;
+            }
+        }
+        & > span {
+            padding: 1rem 0;
         }
     }
     ${({ theme }) => theme.tabletLarge`
             flex-direction: column;
             padding: 2rem;
-        `}
+    `}
 `;
 
 export const SubFooter = styled.div`
     background-color: ${props => props.theme.darkestGrey};
     color: ${props => props.theme.white};
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    & > div {
-        padding: 1rem;
-        font-size: 1.2rem;
-        & > * {
-            padding: 0 2rem;
-        }
+    & > div > ul {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+    & > div > p {
+        text-align: center;
     }
 `;

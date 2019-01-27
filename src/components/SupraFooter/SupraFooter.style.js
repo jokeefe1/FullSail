@@ -1,7 +1,5 @@
-import { FiChevronRight } from 'react-icons/fi';
-import styled from 'styled-components';
 import { FaChevronRight } from 'react-icons/fa';
-
+import styled from 'styled-components';
 
 export const AllDiv = styled.div`
     display: flex;
@@ -42,10 +40,6 @@ export const AllDiv = styled.div`
                     color: ${props => props.theme.white};
                 }
             }
-            & > div:last-child {
-                border-top: 1px solid ${props => props.theme.white};
-                border-right: 1px solid ${props => props.theme.white};
-            }
         }
         ${({ theme }) => theme.tabletLarge`
                     ;
@@ -54,6 +48,5 @@ export const AllDiv = styled.div`
 `;
 
 export const StyledChevron = styled(FaChevronRight)`
-    -webkit-text-stroke: 2px #fff000;
+    color: ${props => props.theme.red};
 `;
-
