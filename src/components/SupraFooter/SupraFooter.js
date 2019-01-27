@@ -1,5 +1,5 @@
 import React from 'react';
-import { AllDiv } from './SupraFooter.style';
+import { AllDiv, StyledChevron } from './SupraFooter.style';
 
 export default function SupraFooter() {
     return (
@@ -11,7 +11,9 @@ export default function SupraFooter() {
                         See why Full Sail University is a unique place to learn.
                     </p>
                 </div>
-                    <div />
+                <div>
+                    <StyledChevron />
+                </div>
             </section>
             <section>
                 <div>
@@ -20,7 +22,9 @@ export default function SupraFooter() {
                         See why Full Sail University is a unique place to learn.
                     </p>
                 </div>
-                <div />
+                <div>
+                    <StyledChevron />
+                </div>
             </section>
         </AllDiv>
     );

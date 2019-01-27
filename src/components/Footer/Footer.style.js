@@ -16,6 +16,9 @@ export const ImgDiv = styled.div`
         width: 22rem;
         padding: 4rem 0 3rem;
     }
+    ${({theme}) => theme.tabletLarge`
+        padding: 2rem;
+    `}
 `;
 
 export const FirstDiv = styled.div`
@@ -25,7 +28,8 @@ export const FirstDiv = styled.div`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.white};
-    display: inline-block;
+    /* display: inline-block; */
+    padding: 1rem;
 `;
 
 export const AllDiv = styled.div`
@@ -34,8 +38,8 @@ export const AllDiv = styled.div`
     font-size: 1.5rem;
     line-height: 1.5;
     padding-bottom: 2rem;
-    & > div:first-child {
-        & > div:first-child {
+    & > section:first-child {
+        & > div {
             padding-right: 8rem;
             border-right: 1px solid ${props => props.theme.lightGrey};
             & > p {
@@ -67,22 +71,26 @@ export const AllDiv = styled.div`
                     background-color: ${props => props.theme.yellow};
                 }
             }
+            ${({ theme }) => theme.tabletLarge`
+            display: flex;
+            justify-content: baseline;
+            & > * {
+                padding: 2rem;
+            }
+        `}
         }
     }
-    & > div:last-child {
+    & > section:last-child {
         & > div {
             display: flex;
-            width: 100%;
-            padding-left: 2rem;
-            font-size: 1.3rem;
-            ${({ theme }) => theme.tabletLarge`
-            background-color: red;
-        `}
-            & > div {
-                padding: 4rem;
-            }
+            background: red;
+            list-style: none;
         }
     }
+    ${({ theme }) => theme.tabletLarge`
+            flex-direction: column;
+            padding: 2rem;
+        `}
 `;
 
 export const SubFooter = styled.div`
@@ -91,7 +99,8 @@ export const SubFooter = styled.div`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     & > div {
         padding: 1rem;

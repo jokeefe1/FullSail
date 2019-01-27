@@ -27,8 +27,7 @@ export default function Footer(props) {
                     />
                 </ImgDiv>
                 <AllDiv>
-                    
-                    <div>
+                    <section>
                         <div>
                             <p>
                                 3300 University Boulevard
@@ -47,85 +46,170 @@ export default function Footer(props) {
                             </div>
                             <button>Contact Us</button>
                         </div>
-                    </div>
+                    </section>
 
-                    <div>
+                    <section>
                         <div>
                             <div>
-                                <StyledLink to="/">
-                                    Full Sail Stories
-                                </StyledLink>
-                                <StyledLink to="/">
-                                    Explore Scholorships
-                                </StyledLink>
-                                <StyledLink to="/">Launch</StyledLink>
-                                <StyledLink to="/">Online Store</StyledLink>
-                                <StyledLink to="/">Artist Relations</StyledLink>
+                                <ul>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Full Sail Stories
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Explore Scholorships
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">Launch</StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Online Store
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Artist Relations
+                                        </StyledLink>
+                                    </li>
+                                </ul>
                             </div>
                             <div>
-                                <StyledLink to="/">Student Login</StyledLink>
-                                <StyledLink to="/">Alumni Network</StyledLink>
-                                <StyledLink to="/">
-                                    Careers At Full Sail
-                                </StyledLink>
-                                <StyledLink to="/">Hire Our Grads</StyledLink>
-                                <StyledLink to="/">Full Sail Labs</StyledLink>
+                                <ul>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Student Login
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Alumni Network
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Careers At Full Sail
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Hire Our Grads
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Full Sail Labs
+                                        </StyledLink>
+                                    </li>
+                                </ul>
                             </div>
                             <div>
-                                <StyledLink to="/">
-                                    Request Information
-                                </StyledLink>
-                                <StyledLink to="/">Apply Now</StyledLink>
-                                <StyledLink to="/">Press Room</StyledLink>
-                                <StyledLink to="/">SchoolsApp</StyledLink>
-                                <StyledLink to="/">Connect With Us</StyledLink>
+                                <ul>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Request Information
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Apply Now
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Press Room
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            SchoolsApp
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            Connect With Us
+                                        </StyledLink>
+                                    </li>
+                                </ul>
                             </div>
                             <div>
-                                <StyledLink to="/">
-                                    <span>
-                                        <FaInstagram />
-                                    </span>
-                                    Instagram
-                                </StyledLink>
-                                <StyledLink to="/">
-                                    <span>
-                                        <FaFacebookF />
-                                    </span>
-                                    Facebook
-                                </StyledLink>
-                                <StyledLink to="/">
-                                    <span>
-                                        <FaTwitter />
-                                    </span>
-                                    Twitter
-                                </StyledLink>
-                                <StyledLink to="/">
-                                    <span>
-                                        <FaPlay />
-                                    </span>
-                                    YouTube
-                                </StyledLink>
-                                <StyledLink to="/">
-                                    <span>
-                                        <FaGlobe />
-                                    </span>
-                                    Virtual Tour
-                                </StyledLink>
+                                <ul>
+                                    <li>
+                                        <StyledLink to="/">
+                                            <span>
+                                                <FaInstagram />
+                                            </span>
+                                            Instagram
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            <span>
+                                                <FaFacebookF />
+                                            </span>
+                                            Facebook
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            <span>
+                                                <FaTwitter />
+                                            </span>
+                                            Twitter
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            <span>
+                                                <FaPlay />
+                                            </span>
+                                            YouTube
+                                        </StyledLink>
+                                    </li>
+                                    <li>
+                                        <StyledLink to="/">
+                                            <span>
+                                                <FaGlobe />
+                                            </span>
+                                            Virtual Tour
+                                        </StyledLink>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                    
+                    </section>
                 </AllDiv>
             </Container>
             <SubFooter>
                 <div>
-                    <StyledLink to="/">Acreditation</StyledLink>
-                    <StyledLink to="/">Your Privacy Rights</StyledLink>
-                    <StyledLink to="/">Consumer Disclosure</StyledLink>
-                    <StyledLink to="/">Net Price Calculator</StyledLink>
-                    <StyledLink to="/">SMS Terms & Conditions</StyledLink>
-                    <StyledLink to="/">Disability Services</StyledLink>
-                    <StyledLink to="/">Campus Safety</StyledLink>
+                    <ul>
+                        <li>
+                            <StyledLink to="/">Acreditation</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">Your Privacy Rights</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">Consumer Disclosure</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">Net Price Calculator</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">
+                                SMS Terms & Conditions
+                            </StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">Disability Services</StyledLink>
+                        </li>
+                        <li>
+                            <StyledLink to="/">Campus Safety</StyledLink>
+                        </li>
+                    </ul>
                 </div>
                 <div>
                     <p>
