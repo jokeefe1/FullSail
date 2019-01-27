@@ -49,6 +49,9 @@ export const StyledLink = styled(Link)`
         color: ${props => props.theme.yellow};
         &:hover {
             color: ${props => props.theme.white};
+            ${({ theme }) => theme.tabletLarge`
+            color: ${props => props.theme.darkGrey};
+        `}
         }
     }
     &:hover {

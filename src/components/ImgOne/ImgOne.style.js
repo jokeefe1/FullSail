@@ -27,6 +27,9 @@ export const TopSection = styled.section`
     & > p:last-child {
         color: ${props => props.theme.yellow};
     }
+    ${({theme}) => theme.tabletLarge`
+        margin-left: 5rem
+    `}
 `;
 
 export const StyledLink = styled(Link)`
@@ -51,7 +54,7 @@ export const MiddleSection = styled.section`
 export const BottomSection = styled.section`
     display: flex;
     justify-content: space-evenly;
-    font-size: 6rem;
+    font-size: 4rem;
     padding-bottom: 5rem;
     & > div {
         display: flex;

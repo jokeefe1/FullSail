@@ -9,7 +9,7 @@ export const StyledSubHeader = styled.div`
         text-align: center;
         padding: 5.75rem 0 3rem;
         font-weight: 300;
-        line-height: 1.5;
+        line-height: 1.7;
         color: ${props => props.theme.lightGrey};
     }
     ${({ theme }) => theme.tabletLarge`

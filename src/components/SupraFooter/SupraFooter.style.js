@@ -28,7 +28,7 @@ export const AllDiv = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 8rem;
+            font-size: 3rem;
         }
         &:hover {
             background-color: ${props => props.theme.red};

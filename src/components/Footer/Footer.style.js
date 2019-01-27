@@ -84,8 +84,18 @@ export const AllDiv = styled.div`
             display: flex;
             justify-content: space-between;
             list-style: none;
-            & > div ul > li {
-                padding: 0.6rem 0;
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                &:first-child {
+                    padding-left: 1rem;
+                }
+                & > ul {
+                    padding: 3rem;
+                    & > li {
+                        padding: 0.6rem 0;
+                    }
+                }
             }
         }
         & > span {
