@@ -17,14 +17,10 @@ import {
 } from './Footer.style';
 
 export default function Footer(props) {
-    return (
-        <StyledFooter>
+    return <StyledFooter>
             <Container>
                 <ImgDiv>
-                    <img
-                        src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931614/fullsail/logo.svg"
-                        alt="logo"
-                    />
+                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1548646796/fullsail/logo2.svg" alt="logo" />
                 </ImgDiv>
                 <AllDiv>
                     <section>
@@ -63,7 +59,9 @@ export default function Footer(props) {
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">Launch</StyledLink>
+                                        <StyledLink to="/">
+                                            Launch
+                                        </StyledLink>
                                     </li>
                                     <li>
                                         <StyledLink to="/">
@@ -190,13 +188,19 @@ export default function Footer(props) {
                             <StyledLink to="/">Acreditation</StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">Your Privacy Rights</StyledLink>
+                            <StyledLink to="/">
+                                Your Privacy Rights
+                            </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">Consumer Disclosure</StyledLink>
+                            <StyledLink to="/">
+                                Consumer Disclosure
+                            </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">Net Price Calculator</StyledLink>
+                            <StyledLink to="/">
+                                Net Price Calculator
+                            </StyledLink>
                         </li>
                         <li>
                             <StyledLink to="/">
@@ -204,7 +208,9 @@ export default function Footer(props) {
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">Disability Services</StyledLink>
+                            <StyledLink to="/">
+                                Disability Services
+                            </StyledLink>
                         </li>
                         <li>
                             <StyledLink to="/">Campus Safety</StyledLink>
@@ -218,6 +224,5 @@ export default function Footer(props) {
                     </p>
                 </div>
             </SubFooter>
-        </StyledFooter>
-    );
+        </StyledFooter>;
 }
