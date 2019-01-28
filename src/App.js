@@ -5,6 +5,7 @@ import HomePage from './components/HomePage/HomePage';
 import AppRouter from './router/AppRouter';
 import media from './media'
 
+
 const theme = {
     white: '#fff',
     darkWhite: '#f1f1f0',
