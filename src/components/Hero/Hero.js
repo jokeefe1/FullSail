@@ -3,6 +3,7 @@ import React from 'react';
 import ImgOne from '../ImgOne/ImgOne';
 import ImgTwo from '../ImgTwo/ImgTwo'
 import ImgThree from '../ImgThree/ImgThree'
+import { StyledCarousel } from './Hero.style'
 
 export default class extends React.Component {
     state = {
@@ -11,7 +12,7 @@ export default class extends React.Component {
 
     render() {
         return (
-            <Carousel
+            <StyledCarousel
                 slideIndex={this.state.slideIndex}
                 afterSlide={slideIndex => this.setState({ slideIndex })}
                 pauseOnHover={true}
@@ -23,12 +24,11 @@ export default class extends React.Component {
                 dragging={true}
                 swiping={true}
                 style={{ height: 400 }}
-                withoutControls={true}
             >
                 <ImgOne />
                 <ImgTwo />
                 <ImgThree />
-            </Carousel>
+            </StyledCarousel>
         );
     }
 }

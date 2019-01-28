@@ -39,20 +39,17 @@ export const AllDiv = styled.div`
            color: ${props => props.theme.white};
            font-size: 1.5rem;
            line-height: 1.5;
-           
+
            padding-bottom: 2rem;
-           & > section{
+           & > section {
                width: 100%;
            }
            & > section:first-child {
-               width:30%;
+               width: 30%;
                & > div {
                    padding-right: 2rem;
                    padding-left: 2rem;
                    border-right: 1px solid ${props => props.theme.lightGrey};
-                   & > p {
-                       /* padding: 0 2rem 2rem; */
-                   }
                    & > div {
                        display: flex;
                        justify-content: space - between;
@@ -86,6 +83,9 @@ export const AllDiv = styled.div`
                     border-bottom: 1px solid ${props => props.theme.lightGrey};
                 `}
                }
+               ${({ theme }) => theme.tabletLarge`
+                   width: 100%;
+                `}
            }
            & > section:last-child {
                & > div {
