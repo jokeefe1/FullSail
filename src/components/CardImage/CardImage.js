@@ -3,7 +3,8 @@ import { FaRegPlayCircle } from 'react-icons/fa';
 import { StyledLink } from '../CardImage/CardImage.style';
 
 export default function CardImage(props) {
-    return <StyledLink to="/">
+    return (
+        <StyledLink to="/card-image">
             <div style={{ backgroundImage: `url(${props.image})` }}>
                 <h3>{props.label}</h3>
             </div>
@@ -15,5 +16,6 @@ export default function CardImage(props) {
                     {props.title}
                 </p>
             </div>
-        </StyledLink>;
+        </StyledLink>
+    );
 }
