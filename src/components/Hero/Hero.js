@@ -23,7 +23,6 @@ export default class extends React.Component {
                 autoGenerateStyleTag={true}
                 dragging={true}
                 swiping={true}
-                style={{ height: 400 }}
             >
                 <ImgOne />
                 <ImgTwo />

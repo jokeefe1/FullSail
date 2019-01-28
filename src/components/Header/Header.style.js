@@ -35,7 +35,7 @@ export const ImgDiv = styled.div`
 
 export const NavLinks = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     ${({ theme }) => theme.phone`
         display: none;
     `}
