@@ -44,7 +44,7 @@ export const StyledLink = styled(Link)`
     }
 `;
 
-export const ImgDiv = styled.div`
+export const ImgDiv = styled(Link)`
     display: flex;
     justify-content: flex-start;
     align-items: center;

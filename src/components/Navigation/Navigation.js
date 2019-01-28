@@ -12,7 +12,7 @@ import {
 const Navigation = props => (
     <NavBar>
         <ContainerHead>
-            <ImgDiv>
+            <ImgDiv to="/">
                 <img
                     src="https://res.cloudinary.com/john-okeefe/image/upload/v1547931614/fullsail/logo.svg"
                     alt="logo"
@@ -28,7 +28,7 @@ const Navigation = props => (
                 <StyledLink to="/apply">
                     We're different <StyledChevron />
                 </StyledLink>
-                <StyledLink to="#">
+                <StyledLink to="online">
                     Campus & Online <StyledChevron />
                 </StyledLink>
                 <StyledLink to="/about">
