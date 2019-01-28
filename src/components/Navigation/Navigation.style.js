@@ -28,7 +28,6 @@ export const NavLinks = styled.div`
 
 export const StyledLink = styled(Link)`
     color: ${props => props.theme.darkGrey};
-    margin: 0 1rem;
     text-decoration: none;
     font-size: 1.4rem;
     padding: 0.7rem;
