@@ -12,7 +12,7 @@ export const StyledDiv = styled.div`
 export const TopSection = styled.section`
            width: 70%;
            padding-left: 3rem;
-           margin-left: 15rem;
+           margin-left: 5rem;
            margin-bottom: 4rem;
            border-left: solid 3px ${props => props.theme.white};
            & > h1 {
