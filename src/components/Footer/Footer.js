@@ -17,10 +17,14 @@ import {
 } from './Footer.style';
 
 export default function Footer(props) {
-    return <StyledFooter>
+    return (
+        <StyledFooter>
             <Container>
                 <ImgDiv>
-                    <img src="https://res.cloudinary.com/john-okeefe/image/upload/v1548646796/fullsail/logo2.svg" alt="logo" />
+                    <img
+                        src="https://res.cloudinary.com/john-okeefe/image/upload/v1548646796/fullsail/logo2.svg"
+                        alt="logo"
+                    />
                 </ImgDiv>
                 <AllDiv>
                     <section>
@@ -49,27 +53,27 @@ export default function Footer(props) {
                             <div>
                                 <ul>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/stories">
                                             Full Sail Stories
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
-                                            Explore Scholorships
+                                        <StyledLink to="/scholarships">
+                                            Explore Scholarships
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/launch">
                                             Launch
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/store">
                                             Online Store
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/artist">
                                             Artist Relations
                                         </StyledLink>
                                     </li>
@@ -78,27 +82,27 @@ export default function Footer(props) {
                             <div>
                                 <ul>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/login">
                                             Student Login
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/alumni">
                                             Alumni Network
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/careers">
                                             Careers At Full Sail
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/grads">
                                             Hire Our Grads
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/labs">
                                             Full Sail Labs
                                         </StyledLink>
                                     </li>
@@ -107,27 +111,27 @@ export default function Footer(props) {
                             <div>
                                 <ul>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/info">
                                             Request Information
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/apply">
                                             Apply Now
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/press">
                                             Press Room
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/app">
                                             SchoolsApp
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/connect">
                                             Connect With Us
                                         </StyledLink>
                                     </li>
@@ -136,7 +140,7 @@ export default function Footer(props) {
                             <div>
                                 <ul>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/instagram">
                                             <span>
                                                 <FaInstagram />
                                             </span>
@@ -144,7 +148,7 @@ export default function Footer(props) {
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/facebook">
                                             <span>
                                                 <FaFacebookF />
                                             </span>
@@ -152,7 +156,7 @@ export default function Footer(props) {
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/twitter">
                                             <span>
                                                 <FaTwitter />
                                             </span>
@@ -160,7 +164,7 @@ export default function Footer(props) {
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/youtube">
                                             <span>
                                                 <FaPlay />
                                             </span>
@@ -168,7 +172,7 @@ export default function Footer(props) {
                                         </StyledLink>
                                     </li>
                                     <li>
-                                        <StyledLink to="/">
+                                        <StyledLink to="/tour">
                                             <span>
                                                 <FaGlobe />
                                             </span>
@@ -185,35 +189,37 @@ export default function Footer(props) {
                 <div>
                     <ul>
                         <li>
-                            <StyledLink to="/">Acreditation</StyledLink>
+                            <StyledLink to="/acreditation">
+                                Acreditation
+                            </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">
+                            <StyledLink to="privacy">
                                 Your Privacy Rights
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">
+                            <StyledLink to="/disclosure">
                                 Consumer Disclosure
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">
+                            <StyledLink to="/calc">
                                 Net Price Calculator
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">
+                            <StyledLink to="/terms">
                                 SMS Terms & Conditions
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">
+                            <StyledLink to="/disability-services">
                                 Disability Services
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink to="/">Campus Safety</StyledLink>
+                            <StyledLink to="/safety">Campus Safety</StyledLink>
                         </li>
                     </ul>
                 </div>
@@ -224,5 +230,6 @@ export default function Footer(props) {
                     </p>
                 </div>
             </SubFooter>
-        </StyledFooter>;
+        </StyledFooter>
+    );
 }

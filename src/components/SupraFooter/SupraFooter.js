@@ -15,7 +15,7 @@ export default function SupraFooter() {
                     <StyledChevron />
                 </div>
             </StyledLink>
-            <StyledLink to='/different'>
+            <StyledLink to='/scholarships'>
                 <div>
                     <h2>Explore Scholarships</h2>
                     <p>
