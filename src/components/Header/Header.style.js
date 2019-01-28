@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
 export const NavBar = styled.div`
     display: flex;
     justify-content: flex-end;
@@ -37,7 +36,7 @@ export const ImgDiv = styled.div`
 export const NavLinks = styled.div`
     display: flex;
     justify-content: space-around;
-    ${({theme}) => theme.phone`
+    ${({ theme }) => theme.phone`
         display: none;
     `}
 `;
@@ -47,7 +46,6 @@ export const StyledLink = styled(Link)`
     margin: 0 1rem;
     text-decoration: none;
     font-size: 1.4rem;
-    padding: 0 0.9rem;
 
     &:first-child {
         color: ${props => props.theme.yellow};
@@ -63,6 +61,9 @@ export const StyledLink = styled(Link)`
     }
     ${({ theme }) => theme.tabletLarge`
         color: ${props => props.theme.darkGrey};
+    `}
+    ${({ theme }) => theme.tablet`
+        display: none;
     `}
 `;
 

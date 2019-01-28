@@ -39,6 +39,7 @@ export const AllDiv = styled.div`
            color: ${props => props.theme.white};
            font-size: 1.5rem;
            line-height: 1.5;
+           
            padding-bottom: 2rem;
            & > section{
                width: 100%;
@@ -118,7 +119,7 @@ export const AllDiv = styled.div`
 export const SubFooter = styled.div`
     background-color: ${props => props.theme.darkestGrey};
     color: ${props => props.theme.white};
-    padding: 1rem;
+    padding: 2rem;
     & > div > ul {
         display: flex;
         justify-content: center;

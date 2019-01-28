@@ -5,9 +5,12 @@ export const MiddleSection = styled.div`
     & > h2 {
         padding: 2rem;
         text-align: center;
-        color: ${({theme}) => theme.darkGrey};
+        color: ${({ theme }) => theme.darkGrey};
     }
-    ${({theme}) => theme.phone`
+    ${({ theme }) => theme.phone`
+        display: inline-block;
+    `}
+    ${({ theme }) => theme.tablet`
         display: inline-block;
     `}
 `;
@@ -31,10 +34,13 @@ export const BottomSection = styled.div`
             color: ${({ theme }) => theme.darkGrey};
         }
         &:hover > * {
-            color: ${({theme}) => theme.yellow};
+            color: ${({ theme }) => theme.yellow};
         }
     }
     ${({ theme }) => theme.phone`
+        display: inline-block;
+    `}
+    ${({ theme }) => theme.tablet`
         display: inline-block;
     `}
 `;

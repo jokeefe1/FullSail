@@ -10,24 +10,43 @@ export const StyledDiv = styled.div`
 `;
 
 export const TopSection = styled.section`
-    width: 70%;
-    padding-left: 3rem;
-    margin-left: 15rem;
-    margin-bottom: 10rem;
-    border-left: solid 3px ${props => props.theme.white};
-    & > h1 {
-        font-size: 6rem;
-        padding-bottom: 2rem;
-    }
-    & > p {
-        font-size: 1.5rem;
-        width: 50%;
-        padding-bottom: 2rem;
-    }
-    & > p:last-child {
-        color: ${props => props.theme.yellow};
-    }
-`;
+           width: 70%;
+           padding-left: 3rem;
+           margin-left: 15rem;
+           margin-bottom: 4rem;
+           border-left: solid 3px ${props => props.theme.white};
+           & > h1 {
+               font-size: 6rem;
+               padding-bottom: 2rem;
+           }
+           & > p {
+               font-size: 1.5rem;
+               width: 50%;
+               padding-bottom: 2rem;
+           }
+           & > p:last-child {
+               color: ${props => props.theme.yellow};
+           }
+           ${({ theme }) => theme.tabletLarge`
+            margin-left: 5rem
+            & > h1 {
+                font-size: 4rem;
+            }
+            `}
+           ${({ theme }) => theme.tablet`
+            margin-left: 5rem
+            & > h1 {
+                font-size: 4rem;
+            }
+            `}
+           ${({ theme }) => theme.phone`
+            margin-left: 5rem
+            & > h1 {
+                font-size: 4rem;
+            }
+            `}
+    
+    `;
 
 export const StyledLink = styled(Link)`
     color: ${props => props.theme.yellow};
@@ -44,14 +63,17 @@ export const MiddleSection = styled.section`
     justify-content: center;
     padding-bottom: 3rem;
     & > h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `}
 `;
 
 export const BottomSection = styled.section`
     display: flex;
     justify-content: space-evenly;
-    font-size: 6rem;
+    font-size: 4rem;
     padding-bottom: 5rem;
     & > div {
         display: flex;
@@ -62,8 +84,11 @@ export const BottomSection = styled.section`
             color: ${props => props.theme.yellow};
         }
         & > p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             padding-top: 1rem;
         }
     }
+    ${({ theme }) => theme.tablet`
+                display: none;
+    `}
 `;
