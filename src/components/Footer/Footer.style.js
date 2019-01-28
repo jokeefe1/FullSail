@@ -18,6 +18,9 @@ export const ImgDiv = styled.div`
     }
     ${({ theme }) => theme.tabletLarge`
         padding: 2rem;
+         & > img {
+        padding: 4rem 0rem 1rem;
+    }
     `}
 `;
 
@@ -28,10 +31,6 @@ export const FirstDiv = styled.div`
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.white};
-    padding: 1rem;
-    & > span {
-        margin: 1rem;
-    }
 `;
 
 export const AllDiv = styled.div`
@@ -85,7 +84,17 @@ export const AllDiv = styled.div`
         }
         ${({ theme }) => theme.tabletLarge`
                    width: 100%;
-                `}
+                   & > div {
+                        padding-left: 1rem;
+                        padding-bottom: 1rem;
+                    }
+        `}
+        ${({ theme }) => theme.phone`
+        & > div {
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+        `}
     }
     & > section:last-child {
         & > div {

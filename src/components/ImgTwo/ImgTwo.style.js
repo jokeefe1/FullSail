@@ -32,20 +32,40 @@ export const TopSection = styled.section`
             & > h1 {
                 font-size: 4rem;
             }
+            & > p{
+                display: none;
+            }
+             & > p:last-child {
+               color: ${props => props.theme.yellow};
+                 display: block;
+           }
             `}
            ${({ theme }) => theme.tablet`
             margin-left: 5rem
             & > h1 {
                 font-size: 4rem;
             }
+             & > p{
+                display: none;
+            }
+             & > p:last-child {
+               color: ${props => props.theme.yellow};
+                 display: block;
+           }
             `}
            ${({ theme }) => theme.phone`
             margin-left: 5rem
             & > h1 {
                 font-size: 4rem;
             }
+             & > p{
+                display: none;
+            }
+             & > p:last-child {
+               color: ${props => props.theme.yellow};
+                 display: block;
+           }
             `}
-    
     `;
 
 export const StyledLink = styled(Link)`
