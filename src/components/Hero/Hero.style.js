@@ -19,4 +19,7 @@ export const StyledCarousel = styled(Carousel)`
     & .slider-control-centerright {
         display: none;
     }
+    & .slider-list {
+        max-height: 440px !important;
+    }
 `;
