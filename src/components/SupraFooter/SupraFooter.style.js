@@ -17,6 +17,7 @@ export const StyledChevron = styled(FaChevronRight)`
 
 export const StyledLink = styled(Link)`
     display: flex;
+    justify-content: space-between;
     text-decoration: none;
     background-color: ${props => props.theme.white};
     padding: 2rem;
