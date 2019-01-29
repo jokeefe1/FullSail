@@ -21,12 +21,12 @@ export const StyledLink = styled(Link)`
     }
     & > div > p {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         background-color: ${({ theme }) => theme.darkWhite};
         color: ${({ theme }) => theme.lightGrey};
-        padding: 2rem;
-        font-size: 2rem;
+        padding: 0 2rem;
+        font-size: 1.7rem;
         height: 10rem;
         border-left: 0.1rem solid ${({ theme }) => theme.grey};
         border-bottom: 0.1rem solid ${({ theme }) => theme.grey};
@@ -44,7 +44,8 @@ export const StyledLink = styled(Link)`
         background-color: ${({ theme }) => theme.white};
         color: ${({ theme }) => theme.lightGrey};
         padding: 2rem;
-        font-size: 2rem;
+        font-size: 1.7rem;
+        line-height: 1.5;
         height: 15rem;
         border-left: 0.1rem solid ${({ theme }) => theme.grey};
         border-bottom: 0.1rem solid ${({ theme }) => theme.grey};

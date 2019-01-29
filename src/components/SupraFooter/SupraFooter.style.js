@@ -7,7 +7,7 @@ export const AllDiv = styled.div`
     justify-content: center;
     background-color: ${props => props.theme.darkWhite};
     ${({ theme }) => theme.tablet`
-            flex-direction: column;
+        flex-direction: column;
     `}
 `;
 
