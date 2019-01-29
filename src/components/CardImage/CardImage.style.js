@@ -21,7 +21,6 @@ export const StyledLink = styled(Link)`
     }
     & > div > p {
         display: flex;
-        /* justify-content: space-around; */
         align-items: center;
         background-color: ${({ theme }) => theme.darkWhite};
         color: ${({ theme }) => theme.lightGrey};
@@ -39,21 +38,33 @@ export const StyledLink = styled(Link)`
         }
     }
     & > div > div {
-        display:flex;
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         background-color: ${({ theme }) => theme.white};
         color: ${({ theme }) => theme.lightGrey};
         padding: 2rem;
         font-size: 1.7rem;
         line-height: 1.5;
-        height: 15rem;
+        height: 20rem;
         border-left: 0.1rem solid ${({ theme }) => theme.grey};
         border-bottom: 0.1rem solid ${({ theme }) => theme.grey};
-        & > h3 {
-            padding: 3rem 0;
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        & > div > h3 {
+            padding: 2rem 0;
             color: ${({ theme }) => theme.darkGrey};
             font-size: 1.3rem;
             font-weight: 900;
         }
     }
+`;
+
+export const StyledDivider = styled.div`
+    height: 0.5rem;
+    width: 4rem;
+    background-color: ${({ theme }) => theme.yellow};
 `;

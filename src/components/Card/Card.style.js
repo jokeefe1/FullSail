@@ -3,15 +3,10 @@ import styled from 'styled-components';
 export const ImgContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 5rem;
-    /* ${({ theme }) => theme.tabletLarge`
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 1fr);
-    `} */
+   
     ${({ theme }) => theme.tabletLarge`
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
         grid-row-gap: 0;
         & > a:nth-child(3n + 1){
             grid-column: 1 / 3;

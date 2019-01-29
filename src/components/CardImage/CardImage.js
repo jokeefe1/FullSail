@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRegPlayCircle } from 'react-icons/fa';
-import { StyledLink } from '../CardImage/CardImage.style';
+import { StyledDivider, StyledLink } from '../CardImage/CardImage.style';
 
 export default function CardImage(props) {
     const switchTitle = props.video ? (
@@ -16,8 +16,10 @@ export default function CardImage(props) {
         <div>
             <div>
                 {props.title}
-                <h3>Read More</h3>
-                <div />
+                <div>
+                    <h3>Read More</h3>
+                    <StyledDivider />
+                </div>
             </div>
         </div>
     );
