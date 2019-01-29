@@ -21,7 +21,7 @@ export const StyledLink = styled(Link)`
     }
     & > div > p {
         display: flex;
-        justify-content: space-evenly;
+        /* justify-content: space-around; */
         align-items: center;
         background-color: ${({ theme }) => theme.darkWhite};
         color: ${({ theme }) => theme.lightGrey};
