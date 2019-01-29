@@ -5,14 +5,14 @@ export const ImgContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 5rem;
-    ${({ theme }) => theme.tabletLarge`
+    /* ${({ theme }) => theme.tabletLarge`
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(3, 1fr);
-    `}
-    ${({ theme }) => theme.tablet`
+    `} */
+    ${({ theme }) => theme.tabletLarge`
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
-        & > a:nth-child(3n){
+        & > a:nth-child(3n + 1){
             grid-column: 1 / 3;
     }
     `}
