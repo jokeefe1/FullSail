@@ -51,7 +51,9 @@ export const StyledLink = styled(Link)`
         border-bottom: 0.1rem solid ${({ theme }) => theme.grey};
         & > h3 {
             padding: 3rem 0;
-            color: ${({ theme }) => theme.lightGrey};
+            color: ${({ theme }) => theme.darkGrey};
+            font-size: 1.3rem;
+            font-weight: 900;
         }
     }
 `;
