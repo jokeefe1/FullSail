@@ -14,7 +14,7 @@ export const ImgDiv = styled.div`
     display: block;
     & > img {
         width: 22rem;
-        padding: 4rem 2rem 1rem;
+        padding: 4rem 2rem 3rem;
     }
     ${({ theme }) => theme.tabletLarge`
         padding: 2rem;
@@ -109,7 +109,7 @@ export const AllDiv = styled.div`
                 }
                 & > ul {
                     padding: 0 0.5rem 1.25rem 0;
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                     & > li {
                         padding: 0.6rem 0;
                     }
@@ -134,6 +134,9 @@ export const SubFooter = styled.div`
         display: flex;
         justify-content: center;
         padding-bottom: 1rem;
+        & > li {
+            padding: 0 1rem;
+        }
     }
     & > div > p {
         text-align: center;
