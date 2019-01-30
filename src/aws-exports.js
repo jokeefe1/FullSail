@@ -4,7 +4,11 @@ const awsmobile =  {
     "aws_project_region": "us-east-1",
     "aws_content_delivery_bucket": "fullsail-20190128094759-hostingbucket",
     "aws_content_delivery_bucket_region": "us-east-1",
-    "aws_content_delivery_url": "http://fullsail-20190128094759-hostingbucket.s3-website-us-east-1.amazonaws.com"
+    "aws_content_delivery_url": "http://fullsail-20190128094759-hostingbucket.s3-website-us-east-1.amazonaws.com",
+    "aws_cognito_identity_pool_id": "us-east-1:c56a497c-2926-436b-81ff-7137cb362f48",
+    "aws_cognito_region": "us-east-1",
+    "aws_user_pools_id": "us-east-1_IjqGzE2sq",
+    "aws_user_pools_web_client_id": "l6v4814dg0uic7g9vanpl4kk4"
 };
 
 

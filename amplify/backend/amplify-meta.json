@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2019-01-28T14:51:12.955Z",
+			"lastPushTimeStamp": "2019-01-30T01:08:23.716Z",
 			"output": {
 				"S3BucketSecureURL": "https://fullsail-20190128094759-hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://fullsail-20190128094759-hostingbucket.s3-website-us-east-1.amazonaws.com",
@@ -27,6 +27,27 @@
 				"HostingBucketName": "fullsail-20190128094759-hostingbucket"
 			},
 			"lastPushDirHash": "JNQg4eiJlqDy65rMbssGnCOK1g4="
+		}
+	},
+	"auth": {
+		"cognito3f0bacc5": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/auth/cognito3f0bacc5-cloudformation-template.yml",
+				"logicalId": "authcognito3f0bacc5"
+			},
+			"lastPushTimeStamp": "2019-01-30T01:08:23.722Z",
+			"output": {
+				"AppClientSecret": "16edl4rejhb4ipjb6n5vqpgrs4pq0lfl9d8lnqfgm3bkjfh235mi",
+				"UserPoolId": "us-east-1_IjqGzE2sq",
+				"AppClientIDWeb": "l6v4814dg0uic7g9vanpl4kk4",
+				"AppClientID": "4p4jti67rvnpto9s564th9b5tj",
+				"IdentityPoolId": "us-east-1:c56a497c-2926-436b-81ff-7137cb362f48",
+				"IdentityPoolName": "cognito3f0bacc5_identitypool_3f0bacc5",
+				"UserPoolName": "cognito3f0bacc5_userpool_3f0bacc5"
+			},
+			"lastPushDirHash": "BCb1tz+M160EAUj0Nz72Qc/a9g4="
 		}
 	}
 }
