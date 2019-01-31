@@ -134,6 +134,38 @@
 					"authSelections": "identityPoolAndUserPool"
 				}
 			}
+		},
+		"analyticsfullsail": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+				"Parameters": {
+					"appName": "fullsail",
+					"roleName": "pinpointLambdaRolec0559a00",
+					"cloudWatchPolicyName": "cloudWatchPolicyc0559a00",
+					"pinpointPolicyName": "pinpointPolicyc0559a00",
+					"authPolicyName": "pinpoint_amplify_c0559a00",
+					"unauthPolicyName": "pinpoint_amplify_c0559a00",
+					"authRoleName": "fullsail-20190128093825-authRole",
+					"unauthRoleName": "fullsail-20190128093825-unauthRole",
+					"IAMPrefix": "373264732885"
+				}
+			}
+		},
+		"storagefullSailMedia": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"Parameters": {
+					"bucketName": "fullsail9f9a98ffc72f460185f3bce178c45e85",
+					"authPolicyName": "s3_amplify_18fabd9a",
+					"unauthPolicyName": "s3_amplify_18fabd9a",
+					"authRoleName": "fullsail-20190128093825-authRole",
+					"unauthRoleName": "fullsail-20190128093825-unauthRole",
+					"authPermissions": "rw",
+					"unauthPermissions": ""
+				}
+			}
 		}
 	},
 	"Outputs": {
