@@ -1,0 +1,9 @@
+{
+    "bucketName": "fullsail9f9a98ffc72f460185f3bce178c45e85",
+    "authPolicyName": "s3_amplify_18fabd9a",
+    "unauthPolicyName": "s3_amplify_18fabd9a",
+    "authRoleName": "fullsail-20190128093825-authRole",
+    "unauthRoleName": "fullsail-20190128093825-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

@@ -1,0 +1,11 @@
+{
+    "appName": "fullsail",
+    "roleName": "pinpointLambdaRolec0559a00",
+    "cloudWatchPolicyName": "cloudWatchPolicyc0559a00",
+    "pinpointPolicyName": "pinpointPolicyc0559a00",
+    "authPolicyName": "pinpoint_amplify_c0559a00",
+    "unauthPolicyName": "pinpoint_amplify_c0559a00",
+    "authRoleName": "fullsail-20190128093825-authRole",
+    "unauthRoleName": "fullsail-20190128093825-unauthRole",
+    "IAMPrefix": "373264732885"
+}

@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "fullsail",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognito3f0bacc5",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://fullsail-20190128093825-deployment/amplify-appsync-files/schema.graphql.1548964407782",
+    "ResolverBucket": "fullsail-20190128093825-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1548964407782"
+}
