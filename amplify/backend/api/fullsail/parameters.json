@@ -6,8 +6,8 @@
             "Outputs.UserPoolId"
         ]
     },
-    "schemaGraphql": "s3://fullsail-20190128093825-deployment/amplify-appsync-files/schema.graphql.1548964407782",
+    "schemaGraphql": "s3://fullsail-20190128093825-deployment/amplify-appsync-files/schema.graphql.1549065368059",
     "ResolverBucket": "fullsail-20190128093825-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1548964407782"
+    "DeploymentTimestamp": "1549065368059"
 }

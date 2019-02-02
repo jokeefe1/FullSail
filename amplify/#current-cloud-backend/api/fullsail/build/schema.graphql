@@ -1,13 +1,21 @@
-type Task {
+type Blog {
   id: ID!
-  title: String!
-  description: String
-  status: String
+  name: String!
+  posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
 }
 
-type PrivateNote {
+type Post {
   id: ID!
+  title: String!
   content: String!
+  blog: Blog
+  comments(filter: ModelCommentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentConnection
+}
+
+type Comment {
+  id: ID!
+  content: String
+  post: Post
 }
 
 enum ModelSortDirection {
@@ -15,8 +23,8 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelTaskConnection {
-  items: [Task]
+type ModelBlogConnection {
+  items: [Blog]
   nextToken: String
 }
 
@@ -75,82 +83,118 @@ input ModelBooleanFilterInput {
   eq: Boolean
 }
 
-input ModelTaskFilterInput {
+input ModelBlogFilterInput {
   id: ModelIDFilterInput
-  title: ModelStringFilterInput
-  description: ModelStringFilterInput
-  status: ModelStringFilterInput
-  and: [ModelTaskFilterInput]
-  or: [ModelTaskFilterInput]
-  not: ModelTaskFilterInput
+  name: ModelStringFilterInput
+  and: [ModelBlogFilterInput]
+  or: [ModelBlogFilterInput]
+  not: ModelBlogFilterInput
 }
 
 type Query {
-  getTask(id: ID!): Task
-  listTasks(filter: ModelTaskFilterInput, limit: Int, nextToken: String): ModelTaskConnection
-  getPrivateNote(id: ID!): PrivateNote
-  listPrivateNotes(filter: ModelPrivateNoteFilterInput, limit: Int, nextToken: String): ModelPrivateNoteConnection
+  getBlog(id: ID!): Blog
+  listBlogs(filter: ModelBlogFilterInput, limit: Int, nextToken: String): ModelBlogConnection
+  getPost(id: ID!): Post
+  listPosts(filter: ModelPostFilterInput, limit: Int, nextToken: String): ModelPostConnection
+  getComment(id: ID!): Comment
+  listComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String): ModelCommentConnection
 }
 
-input CreateTaskInput {
+input CreateBlogInput {
   id: ID
-  title: String!
-  description: String
-  status: String
+  name: String!
 }
 
-input UpdateTaskInput {
+input UpdateBlogInput {
   id: ID!
-  title: String
-  description: String
-  status: String
+  name: String
 }
 
-input DeleteTaskInput {
+input DeleteBlogInput {
   id: ID
 }
 
 type Mutation {
-  createTask(input: CreateTaskInput!): Task
-  updateTask(input: UpdateTaskInput!): Task
-  deleteTask(input: DeleteTaskInput!): Task
-  createPrivateNote(input: CreatePrivateNoteInput!): PrivateNote
-  updatePrivateNote(input: UpdatePrivateNoteInput!): PrivateNote
-  deletePrivateNote(input: DeletePrivateNoteInput!): PrivateNote
+  createBlog(input: CreateBlogInput!): Blog
+  updateBlog(input: UpdateBlogInput!): Blog
+  deleteBlog(input: DeleteBlogInput!): Blog
+  createPost(input: CreatePostInput!): Post
+  updatePost(input: UpdatePostInput!): Post
+  deletePost(input: DeletePostInput!): Post
+  createComment(input: CreateCommentInput!): Comment
+  updateComment(input: UpdateCommentInput!): Comment
+  deleteComment(input: DeleteCommentInput!): Comment
 }
 
 type Subscription {
-  onCreateTask: Task @aws_subscribe(mutations: ["createTask"])
-  onUpdateTask: Task @aws_subscribe(mutations: ["updateTask"])
-  onDeleteTask: Task @aws_subscribe(mutations: ["deleteTask"])
-  onCreatePrivateNote: PrivateNote @aws_subscribe(mutations: ["createPrivateNote"])
-  onUpdatePrivateNote: PrivateNote @aws_subscribe(mutations: ["updatePrivateNote"])
-  onDeletePrivateNote: PrivateNote @aws_subscribe(mutations: ["deletePrivateNote"])
+  onCreateBlog: Blog @aws_subscribe(mutations: ["createBlog"])
+  onUpdateBlog: Blog @aws_subscribe(mutations: ["updateBlog"])
+  onDeleteBlog: Blog @aws_subscribe(mutations: ["deleteBlog"])
+  onCreatePost: Post @aws_subscribe(mutations: ["createPost"])
+  onUpdatePost: Post @aws_subscribe(mutations: ["updatePost"])
+  onDeletePost: Post @aws_subscribe(mutations: ["deletePost"])
+  onCreateComment: Comment @aws_subscribe(mutations: ["createComment"])
+  onUpdateComment: Comment @aws_subscribe(mutations: ["updateComment"])
+  onDeleteComment: Comment @aws_subscribe(mutations: ["deleteComment"])
 }
 
-type ModelPrivateNoteConnection {
-  items: [PrivateNote]
+type ModelPostConnection {
+  items: [Post]
   nextToken: String
 }
 
-input ModelPrivateNoteFilterInput {
+input ModelPostFilterInput {
+  id: ModelIDFilterInput
+  title: ModelStringFilterInput
+  content: ModelStringFilterInput
+  and: [ModelPostFilterInput]
+  or: [ModelPostFilterInput]
+  not: ModelPostFilterInput
+}
+
+input CreatePostInput {
+  id: ID
+  title: String!
+  content: String!
+  postBlogId: ID
+}
+
+input UpdatePostInput {
+  id: ID!
+  title: String
+  content: String
+  postBlogId: ID
+}
+
+input DeletePostInput {
+  id: ID
+}
+
+type ModelCommentConnection {
+  items: [Comment]
+  nextToken: String
+}
+
+input ModelCommentFilterInput {
   id: ModelIDFilterInput
   content: ModelStringFilterInput
-  and: [ModelPrivateNoteFilterInput]
-  or: [ModelPrivateNoteFilterInput]
-  not: ModelPrivateNoteFilterInput
+  and: [ModelCommentFilterInput]
+  or: [ModelCommentFilterInput]
+  not: ModelCommentFilterInput
 }
 
-input CreatePrivateNoteInput {
+input CreateCommentInput {
   id: ID
-  content: String!
+  content: String
+  commentPostId: ID
 }
 
-input UpdatePrivateNoteInput {
+input UpdateCommentInput {
   id: ID!
   content: String
+  commentPostId: ID
 }
 
-input DeletePrivateNoteInput {
+input DeleteCommentInput {
   id: ID
 }
