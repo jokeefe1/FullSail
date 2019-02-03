@@ -1,6 +1,6 @@
 ## [Start] Static Group Authorization Checks **
 #set( $userGroups = $ctx.identity.claims.get("cognito:groups") )
-#set( $allowedGroups = ["owners", "everyone"] )
+#set( $allowedGroups = ["everyone"] )
 #set($isStaticGroupAuthorized = $util.defaultIfNull($isStaticGroupAuthorized, false))
 #foreach( $userGroup in $userGroups )
   #foreach( $allowedGroup in $allowedGroups )
@@ -19,7 +19,24 @@
     ## No Dynamic Group Authorization Rules **
 
 
-    ## No Owner Authorization Rules **
+    ## [Start] Owner Authorization Checks **
+    #set( $isLocalOwnerAuthorized = false )
+    ## Authorization rule: { allow: "owner", ownerField: "owner", identityField: "cognito:username" } **
+    #set( $allowedOwners0 = $item.owner )
+    #set( $identityValue = $util.defaultIfNull($ctx.identity.claims.get("username"), $util.defaultIfNull($ctx.identity.claims.get("cognito:username"), "___xamznone____")) )
+    #if( $util.isList($allowedOwners0) )
+      #foreach( $allowedOwner in $allowedOwners0 )
+        #if( $allowedOwner == $identityValue )
+          #set( $isLocalOwnerAuthorized = true )
+        #end
+      #end
+    #end
+    #if( $util.isString($allowedOwners0) )
+      #if( $allowedOwners0 == $identityValue )
+        #set( $isLocalOwnerAuthorized = true )
+      #end
+    #end
+    ## [End] Owner Authorization Checks **
 
 
     #if( ($isLocalDynamicGroupAuthorized == true || $isLocalOwnerAuthorized == true) )

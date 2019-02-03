@@ -12,7 +12,6 @@ class Card extends Component {
 
     render() {
         const { data } = this.state
-        console.log(data)
         const card = data.map( item => {
             const { id, image, label, title, video } = item
             return (

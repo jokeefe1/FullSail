@@ -1,19 +1,33 @@
+import { PhotoPicker } from 'aws-amplify-react';
 import React from 'react';
 
-export default function Blog(props) {
-    const data = props.blogData.map(item => {
-        return (
-            <div key={item.id}>
-                <h3>{item.title}</h3>
-                <p>{item.content}</p>
-            </div>
-        );
-    });
+export default class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-    return (
-        <div>
-            <h1>Blog</h1>
-            {data}
-        </div>
-    );
+    render() {
+        const profile = this.props.profilesData.map(profile => {
+            return (
+                <div key={profile.id}>
+                    <h3>
+                        {`${profile.firstName}`}
+                        <button onClick={this.props.handleEdit}>edit</button>
+                    </h3>
+                </div>
+            );
+        });
+
+        return (
+            <>
+                <h1>Student Profile</h1>
+                {profile}
+                <PhotoPicker
+                    preview
+                    onLoad={dataURL => this.props.handleImg(dataURL)}
+                />
+            </>
+        );
+    }
 }

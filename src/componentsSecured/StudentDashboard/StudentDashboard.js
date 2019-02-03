@@ -1,53 +1,39 @@
-import Amplify, {
-    Analytics,
-    API,
-    graphqlOperation,
-    Storage
-} from 'aws-amplify';
-import { withAuthenticator } from 'aws-amplify-react';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import React from 'react';
 import aws_exports from '../../aws-exports';
-import Profile from '../Profile/Profile'
+import { listProfiles } from '../../graphql/queries';
+import Profile from '../Profile/Profile';
 Amplify.configure(aws_exports);
-Storage.configure({ level: 'private' });
 
-const query = `
-    query {
-        listPosts {
-        items {
-        id
-        title
-        content
+export default class StudentDashboard extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            profiles: [],
+            img: ''
+        };
+        this.handleEdit = this.handleEdit.bind(this);
     }
-  }
-}
-`;
-
-class StudentDashboard extends React.Component {
-    state = { profile: [] };
-
-    uploadFile = evt => {
-        const file = evt.target.files[0];
-        const name = file.name;
-
-        Storage.put(name, file).then(() => {
-            this.setState({ file: name });
-        });
-    };
 
     async componentDidMount() {
-        Analytics.record('Amplify_CLI');
-        const data = await API.graphql(graphqlOperation(query));
-        this.setState({ blog: data.data.listPosts.items });
+        const data = await API.graphql(graphqlOperation(listProfiles));
+        this.setState({ profiles: data.data.listProfiles.items });
+        console.log(data.data.listProfiles.items);
+    }
+
+    handleEdit(e) {
+        this.setState({ profiles: [{ firstName: e.target.value }] });
     }
 
     render() {
         return (
             <>
-                <Profile blogData={this.state.profile}/>
+                <Profile
+                    profilesData={this.state.profiles}
+                    handleImg={this.handleImg}
+                    handleEdit={this.handleEdit}
+                />
             </>
         );
     }
 }
-
-export default withAuthenticator(StudentDashboard, true);
