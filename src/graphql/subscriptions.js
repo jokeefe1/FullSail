@@ -1,11 +1,13 @@
 // eslint-disable
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = `subscription OnCreateBlog {
-  onCreateBlog {
+export const onCreateProfile = `subscription OnCreateProfile {
+  onCreateProfile {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -16,11 +18,13 @@ export const onCreateBlog = `subscription OnCreateBlog {
   }
 }
 `;
-export const onUpdateBlog = `subscription OnUpdateBlog {
-  onUpdateBlog {
+export const onUpdateProfile = `subscription OnUpdateProfile {
+  onUpdateProfile {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -31,11 +35,13 @@ export const onUpdateBlog = `subscription OnUpdateBlog {
   }
 }
 `;
-export const onDeleteBlog = `subscription OnDeleteBlog {
-  onDeleteBlog {
+export const onDeleteProfile = `subscription OnDeleteProfile {
+  onDeleteProfile {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -46,123 +52,51 @@ export const onDeleteBlog = `subscription OnDeleteBlog {
   }
 }
 `;
-export const onCreatePost = `subscription OnCreatePost {
-  onCreatePost {
+export const onCreateCourse = `subscription OnCreateCourse {
+  onCreateCourse {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
     }
   }
 }
 `;
-export const onUpdatePost = `subscription OnUpdatePost {
-  onUpdatePost {
+export const onUpdateCourse = `subscription OnUpdateCourse {
+  onUpdateCourse {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
     }
   }
 }
 `;
-export const onDeletePost = `subscription OnDeletePost {
-  onDeletePost {
+export const onDeleteCourse = `subscription OnDeleteCourse {
+  onDeleteCourse {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
-        nextToken
-      }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreateComment = `subscription OnCreateComment {
-  onCreateComment {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const onUpdateComment = `subscription OnUpdateComment {
-  onUpdateComment {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const onDeleteComment = `subscription OnDeleteComment {
-  onDeleteComment {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
     }

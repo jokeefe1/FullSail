@@ -6,8 +6,10 @@
             "Outputs.UserPoolId"
         ]
     },
-    "schemaGraphql": "s3://fullsail-20190128093825-deployment/amplify-appsync-files/schema.graphql.1549065368059",
+    "schemaGraphql": "s3://fullsail-20190128093825-deployment/amplify-appsync-files/schema.graphql.1549163068429",
+    "ElasticSearchStreamingLambdaCodeS3Key": "amplify-appsync-files/python_streaming_function.zip",
+    "ElasticSearchStreamingLambdaCodeS3Bucket": "fullsail-20190128093825-deployment",
     "ResolverBucket": "fullsail-20190128093825-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1549065368059"
+    "DeploymentTimestamp": "1549163068429"
 }

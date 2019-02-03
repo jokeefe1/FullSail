@@ -1,17 +1,23 @@
-type Blog @model {
-    id: ID!
-    name: String!
-    posts: [Post] @connection(name: "BlogPosts")
+type Profile @model
+  @auth(rules:[
+    {allow: groups, groups:["owners"], mutations:[create, update]},
+    {allow: groups, groups:["everyone"], queries:[get, list]}
+  ])
+{
+  id: ID!
+  picture: String
+  firstName: String!
+  lastName: String!
+  course: [Course] @connection(name: "Schedule")
 }
-type Post @model {
-    id: ID!
-    title: String!
-    content: String!
-    blog: Blog @connection(name: "BlogPosts")
-    comments: [Comment] @connection(name: "PostComments")
-}
-type Comment @model {
-    id: ID!
-    content: String
-    post: Post @connection(name: "PostComments")
+type Course @model @searchable   
+  @auth(rules:[
+    {allow: owner },
+    {allow: groups, groups:["advisors"], mutations:[create, update, delete]}
+  ]) 
+{
+  id: ID!
+  title: String!
+  content: String!
+  profile: Profile @connection(name: "Schedule")
 }

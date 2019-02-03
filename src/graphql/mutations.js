@@ -1,11 +1,13 @@
 // eslint-disable
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
-  createBlog(input: $input) {
+export const createProfile = `mutation CreateProfile($input: CreateProfileInput!) {
+  createProfile(input: $input) {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -16,11 +18,13 @@ export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
   }
 }
 `;
-export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
-  updateBlog(input: $input) {
+export const updateProfile = `mutation UpdateProfile($input: UpdateProfileInput!) {
+  updateProfile(input: $input) {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -31,11 +35,13 @@ export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
   }
 }
 `;
-export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
-  deleteBlog(input: $input) {
+export const deleteProfile = `mutation DeleteProfile($input: DeleteProfileInput!) {
+  deleteProfile(input: $input) {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -46,123 +52,51 @@ export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
   }
 }
 `;
-export const createPost = `mutation CreatePost($input: CreatePostInput!) {
-  createPost(input: $input) {
+export const createCourse = `mutation CreateCourse($input: CreateCourseInput!) {
+  createCourse(input: $input) {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
     }
   }
 }
 `;
-export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
-  updatePost(input: $input) {
+export const updateCourse = `mutation UpdateCourse($input: UpdateCourseInput!) {
+  updateCourse(input: $input) {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
     }
   }
 }
 `;
-export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
-  deletePost(input: $input) {
+export const deleteCourse = `mutation DeleteCourse($input: DeleteCourseInput!) {
+  deleteCourse(input: $input) {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
-        nextToken
-      }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const createComment = `mutation CreateComment($input: CreateCommentInput!) {
-  createComment(input: $input) {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!) {
-  updateComment(input: $input) {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!) {
-  deleteComment(input: $input) {
-    id
-    content
-    post {
-      id
-      title
-      content
-      blog {
-        id
-        name
-      }
-      comments {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
     }

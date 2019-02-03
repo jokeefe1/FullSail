@@ -1,21 +1,16 @@
-type Blog {
+type Profile {
   id: ID!
-  name: String!
-  posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
+  picture: String
+  firstName: String!
+  lastName: String!
+  course(filter: ModelCourseFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCourseConnection
 }
 
-type Post {
+type Course {
   id: ID!
   title: String!
   content: String!
-  blog: Blog
-  comments(filter: ModelCommentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentConnection
-}
-
-type Comment {
-  id: ID!
-  content: String
-  post: Post
+  profile: Profile
 }
 
 enum ModelSortDirection {
@@ -23,8 +18,8 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelBlogConnection {
-  items: [Blog]
+type ModelProfileConnection {
+  items: [Profile]
   nextToken: String
 }
 
@@ -83,118 +78,167 @@ input ModelBooleanFilterInput {
   eq: Boolean
 }
 
-input ModelBlogFilterInput {
+input ModelProfileFilterInput {
   id: ModelIDFilterInput
-  name: ModelStringFilterInput
-  and: [ModelBlogFilterInput]
-  or: [ModelBlogFilterInput]
-  not: ModelBlogFilterInput
+  picture: ModelStringFilterInput
+  firstName: ModelStringFilterInput
+  lastName: ModelStringFilterInput
+  and: [ModelProfileFilterInput]
+  or: [ModelProfileFilterInput]
+  not: ModelProfileFilterInput
 }
 
 type Query {
-  getBlog(id: ID!): Blog
-  listBlogs(filter: ModelBlogFilterInput, limit: Int, nextToken: String): ModelBlogConnection
-  getPost(id: ID!): Post
-  listPosts(filter: ModelPostFilterInput, limit: Int, nextToken: String): ModelPostConnection
-  getComment(id: ID!): Comment
-  listComments(filter: ModelCommentFilterInput, limit: Int, nextToken: String): ModelCommentConnection
+  getProfile(id: ID!): Profile
+  listProfiles(filter: ModelProfileFilterInput, limit: Int, nextToken: String): ModelProfileConnection
+  getCourse(id: ID!): Course
+  listCourses(filter: ModelCourseFilterInput, limit: Int, nextToken: String): ModelCourseConnection
+  searchCourses(filter: SearchableCourseFilterInput, sort: SearchableCourseSortInput, limit: Int, nextToken: Int): SearchableCourseConnection
 }
 
-input CreateBlogInput {
+input CreateProfileInput {
   id: ID
-  name: String!
+  picture: String
+  firstName: String!
+  lastName: String!
 }
 
-input UpdateBlogInput {
+input UpdateProfileInput {
   id: ID!
-  name: String
+  picture: String
+  firstName: String
+  lastName: String
 }
 
-input DeleteBlogInput {
+input DeleteProfileInput {
   id: ID
 }
 
 type Mutation {
-  createBlog(input: CreateBlogInput!): Blog
-  updateBlog(input: UpdateBlogInput!): Blog
-  deleteBlog(input: DeleteBlogInput!): Blog
-  createPost(input: CreatePostInput!): Post
-  updatePost(input: UpdatePostInput!): Post
-  deletePost(input: DeletePostInput!): Post
-  createComment(input: CreateCommentInput!): Comment
-  updateComment(input: UpdateCommentInput!): Comment
-  deleteComment(input: DeleteCommentInput!): Comment
+  createProfile(input: CreateProfileInput!): Profile
+  updateProfile(input: UpdateProfileInput!): Profile
+  deleteProfile(input: DeleteProfileInput!): Profile
+  createCourse(input: CreateCourseInput!): Course
+  updateCourse(input: UpdateCourseInput!): Course
+  deleteCourse(input: DeleteCourseInput!): Course
 }
 
 type Subscription {
-  onCreateBlog: Blog @aws_subscribe(mutations: ["createBlog"])
-  onUpdateBlog: Blog @aws_subscribe(mutations: ["updateBlog"])
-  onDeleteBlog: Blog @aws_subscribe(mutations: ["deleteBlog"])
-  onCreatePost: Post @aws_subscribe(mutations: ["createPost"])
-  onUpdatePost: Post @aws_subscribe(mutations: ["updatePost"])
-  onDeletePost: Post @aws_subscribe(mutations: ["deletePost"])
-  onCreateComment: Comment @aws_subscribe(mutations: ["createComment"])
-  onUpdateComment: Comment @aws_subscribe(mutations: ["updateComment"])
-  onDeleteComment: Comment @aws_subscribe(mutations: ["deleteComment"])
+  onCreateProfile: Profile @aws_subscribe(mutations: ["createProfile"])
+  onUpdateProfile: Profile @aws_subscribe(mutations: ["updateProfile"])
+  onDeleteProfile: Profile @aws_subscribe(mutations: ["deleteProfile"])
+  onCreateCourse: Course @aws_subscribe(mutations: ["createCourse"])
+  onUpdateCourse: Course @aws_subscribe(mutations: ["updateCourse"])
+  onDeleteCourse: Course @aws_subscribe(mutations: ["deleteCourse"])
 }
 
-type ModelPostConnection {
-  items: [Post]
+type ModelCourseConnection {
+  items: [Course]
   nextToken: String
 }
 
-input ModelPostFilterInput {
+input ModelCourseFilterInput {
   id: ModelIDFilterInput
   title: ModelStringFilterInput
   content: ModelStringFilterInput
-  and: [ModelPostFilterInput]
-  or: [ModelPostFilterInput]
-  not: ModelPostFilterInput
+  and: [ModelCourseFilterInput]
+  or: [ModelCourseFilterInput]
+  not: ModelCourseFilterInput
 }
 
-input CreatePostInput {
+input CreateCourseInput {
   id: ID
   title: String!
   content: String!
-  postBlogId: ID
+  courseProfileId: ID
 }
 
-input UpdatePostInput {
+input UpdateCourseInput {
   id: ID!
   title: String
   content: String
-  postBlogId: ID
+  courseProfileId: ID
 }
 
-input DeletePostInput {
+input DeleteCourseInput {
   id: ID
 }
 
-type ModelCommentConnection {
-  items: [Comment]
+input SearchableStringFilterInput {
+  ne: String
+  eq: String
+  match: String
+  matchPhrase: String
+  matchPhrasePrefix: String
+  multiMatch: String
+  exists: Boolean
+  wildcard: String
+  regexp: String
+}
+
+input SearchableIDFilterInput {
+  ne: ID
+  eq: ID
+  match: ID
+  matchPhrase: ID
+  matchPhrasePrefix: ID
+  multiMatch: ID
+  exists: Boolean
+  wildcard: ID
+  regexp: ID
+}
+
+input SearchableIntFilterInput {
+  ne: Int
+  gt: Int
+  lt: Int
+  gte: Int
+  lte: Int
+  eq: Int
+  range: [Int]
+}
+
+input SearchableFloatFilterInput {
+  ne: Float
+  gt: Float
+  lt: Float
+  gte: Float
+  lte: Float
+  eq: Float
+  range: [Float]
+}
+
+input SearchableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input SearchableCourseFilterInput {
+  id: SearchableIDFilterInput
+  title: SearchableStringFilterInput
+  content: SearchableStringFilterInput
+  and: [SearchableCourseFilterInput]
+  or: [SearchableCourseFilterInput]
+  not: SearchableCourseFilterInput
+}
+
+enum SearchableSortDirection {
+  asc
+  desc
+}
+
+enum SearchableCourseSortableFields {
+  id
+  title
+  content
+}
+
+input SearchableCourseSortInput {
+  field: SearchableCourseSortableFields
+  direction: SearchableSortDirection
+}
+
+type SearchableCourseConnection {
+  items: [Course]
   nextToken: String
-}
-
-input ModelCommentFilterInput {
-  id: ModelIDFilterInput
-  content: ModelStringFilterInput
-  and: [ModelCommentFilterInput]
-  or: [ModelCommentFilterInput]
-  not: ModelCommentFilterInput
-}
-
-input CreateCommentInput {
-  id: ID
-  content: String
-  commentPostId: ID
-}
-
-input UpdateCommentInput {
-  id: ID!
-  content: String
-  commentPostId: ID
-}
-
-input DeleteCommentInput {
-  id: ID
 }

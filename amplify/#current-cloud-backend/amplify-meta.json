@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2019-02-01T23:59:48.951Z",
+			"lastPushTimeStamp": "2019-02-03T03:06:11.102Z",
 			"output": {
 				"S3BucketSecureURL": "https://fullsail-20190128094759-hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://fullsail-20190128094759-hostingbucket.s3-website-us-east-1.amazonaws.com",
@@ -37,7 +37,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/auth/cognito3f0bacc5-cloudformation-template.yml",
 				"logicalId": "authcognito3f0bacc5"
 			},
-			"lastPushTimeStamp": "2019-02-01T23:59:48.964Z",
+			"lastPushTimeStamp": "2019-02-03T03:06:11.106Z",
 			"output": {
 				"AppClientSecret": "16edl4rejhb4ipjb6n5vqpgrs4pq0lfl9d8lnqfgm3bkjfh235mi",
 				"UserPoolId": "us-east-1_IjqGzE2sq",
@@ -58,7 +58,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
 				"logicalId": "analyticsfullsail"
 			},
-			"lastPushTimeStamp": "2019-02-01T23:59:48.967Z",
+			"lastPushTimeStamp": "2019-02-03T03:06:11.108Z",
 			"output": {
 				"appName": "fullsail",
 				"Region": "us-east-1",
@@ -75,7 +75,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
 				"logicalId": "storagefullSailMedia"
 			},
-			"lastPushTimeStamp": "2019-02-01T23:59:48.970Z",
+			"lastPushTimeStamp": "2019-02-03T03:06:11.110Z",
 			"output": {
 				"BucketName": "fullsail9f9a98ffc72f460185f3bce178c45e85",
 				"Region": "us-east-1"
@@ -100,8 +100,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/fullsail-20190128093825-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apifullsail"
 			},
-			"lastPushTimeStamp": "2019-02-01T23:59:51.119Z",
-			"lastPushDirHash": "JoiuhtRL+Tfnvx0VdC3mzRX34nQ="
+			"lastPushTimeStamp": "2019-02-03T03:06:12.140Z",
+			"lastPushDirHash": "l1JNQDSVKOLQWcFcHKJF2SRxuvs="
 		}
 	}
 }

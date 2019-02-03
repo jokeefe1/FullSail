@@ -35,7 +35,7 @@ function App() {
                 </AppRouter>
             </>
         </ThemeProvider>
-    );
+    ); 
 }
 
 export default App;

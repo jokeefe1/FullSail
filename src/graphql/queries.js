@@ -1,11 +1,13 @@
 // eslint-disable
 // this is an auto generated file. This will be overwritten
 
-export const getBlog = `query GetBlog($id: ID!) {
-  getBlog(id: $id) {
+export const getProfile = `query GetProfile($id: ID!) {
+  getProfile(id: $id) {
     id
-    name
-    posts {
+    picture
+    firstName
+    lastName
+    course {
       items {
         id
         title
@@ -16,16 +18,18 @@ export const getBlog = `query GetBlog($id: ID!) {
   }
 }
 `;
-export const listBlogs = `query ListBlogs(
-  $filter: ModelBlogFilterInput
+export const listProfiles = `query ListProfiles(
+  $filter: ModelProfileFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listProfiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
     }
@@ -33,82 +37,65 @@ export const listBlogs = `query ListBlogs(
   }
 }
 `;
-export const getPost = `query GetPost($id: ID!) {
-  getPost(id: $id) {
+export const getCourse = `query GetCourse($id: ID!) {
+  getCourse(id: $id) {
     id
     title
     content
-    blog {
+    profile {
       id
-      name
-      posts {
+      picture
+      firstName
+      lastName
+      course {
         nextToken
       }
-    }
-    comments {
-      items {
-        id
-        content
-      }
-      nextToken
     }
   }
 }
 `;
-export const listPosts = `query ListPosts(
-  $filter: ModelPostFilterInput
+export const listCourses = `query ListCourses(
+  $filter: ModelCourseFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listCourses(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
       title
       content
-      blog {
+      profile {
         id
-        name
-      }
-      comments {
-        nextToken
+        picture
+        firstName
+        lastName
       }
     }
     nextToken
   }
 }
 `;
-export const getComment = `query GetComment($id: ID!) {
-  getComment(id: $id) {
-    id
-    content
-    post {
+export const searchCourses = `query SearchCourses(
+  $filter: SearchableCourseFilterInput
+  $sort: SearchableCourseSortInput
+  $limit: Int
+  $nextToken: Int
+) {
+  searchCourses(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
       id
       title
       content
-      blog {
+      profile {
         id
-        name
-      }
-      comments {
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const listComments = `query ListComments(
-  $filter: ModelCommentFilterInput
-  $limit: Int
-  $nextToken: String
-) {
-  listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      id
-      content
-      post {
-        id
-        title
-        content
+        picture
+        firstName
+        lastName
       }
     }
     nextToken

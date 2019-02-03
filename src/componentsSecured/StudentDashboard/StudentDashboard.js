@@ -7,6 +7,7 @@ import Amplify, {
 import { withAuthenticator } from 'aws-amplify-react';
 import React from 'react';
 import aws_exports from '../../aws-exports';
+import Profile from '../Profile/Profile'
 Amplify.configure(aws_exports);
 Storage.configure({ level: 'private' });
 
@@ -22,8 +23,8 @@ const query = `
 }
 `;
 
-class Student extends React.Component {
-    state = { blog: [] };
+class StudentDashboard extends React.Component {
+    state = { profile: [] };
 
     uploadFile = evt => {
         const file = evt.target.files[0];
@@ -37,24 +38,16 @@ class Student extends React.Component {
     async componentDidMount() {
         Analytics.record('Amplify_CLI');
         const data = await API.graphql(graphqlOperation(query));
-        console.log(data);
         this.setState({ blog: data.data.listPosts.items });
     }
 
     render() {
         return (
             <>
-                <h1>Hello you are now in the secured student area</h1>
-                {this.state.blog.map((post, index) => {
-                    return (
-                        <div key={post.id}>
-                            <h2>{post.title}</h2>
-                            <p>{post.content}</p>
-                        </div>                    );
-                })}
+                <Profile blogData={this.state.profile}/>
             </>
         );
     }
 }
 
-export default withAuthenticator(Student, true);
+export default withAuthenticator(StudentDashboard, true);
